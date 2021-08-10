@@ -24754,6 +24754,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@assert_failed",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "197",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\stm8s_conf.h"
+    },
+    "name": "assert_failed",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:stm8s_flash.h@1292@macro@__STM8S_FLASH_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -38032,10 +38046,122 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "11",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@RXBuff",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "RXBuff",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "RXBuff",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8CountRecieve",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8CountRecieve",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "u8CountRecieve",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vUART_Config",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vUART_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "vUART_Config",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@eUART_Recieve",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "enum uart_state eUART_Recieve(void)",
+    "location": {
+      "column": "17",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "eUART_Recieve",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.c@537@F@eUART_Recieve@eState",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "eState",
+    "location": {
+      "column": "19",
+      "line": "21",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "eState",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.c@627@F@eUART_Recieve@tData",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tData",
+    "location": {
+      "column": "13",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "tData",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vUART_Transmit",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vUART_Transmit(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "34",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "vUART_Transmit",
     "origin": "project_file",
     "scope": null
   },
@@ -38165,90 +38291,6 @@
     },
     "name": "vUART_Transmit",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@RXBuff",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "RXBuff",
-    "location": {
-      "column": "9",
-      "line": "3",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "RXBuff",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8CountRecieve",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8CountRecieve",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "u8CountRecieve",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vUART_Config",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void vUART_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "vUART_Config",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@eUART_Recieve",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "enum uart_state eUART_Recieve(void)",
-    "location": {
-      "column": "17",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "eUART_Recieve",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.c@426@F@eUART_Recieve@eState",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "eState",
-    "location": {
-      "column": "19",
-      "line": "21",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "eState",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vUART_Transmit",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void vUART_Transmit(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "33",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "vUART_Transmit",
-    "origin": "project_file",
     "scope": null
   }
 ]

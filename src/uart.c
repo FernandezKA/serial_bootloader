@@ -8,9 +8,9 @@ uint8_t u8CountRecieve;
 *@retval: none
 */
 void vUART_Config(void){
-  UART1->BRR1 = 0x34U;
-  UART1->BRR2 = 0x08U;
-  UART1->CR2|= UART1_CR2_TEN|UART1_CR2_REN;
+  CLK->PCKENR1|=CLK_PCKENR1_UART1;//ENABLE CLOCKING
+  UART1_Init(9600, UART1_WORDLENGTH_8D, UART1_STOPBITS_1, UART1_PARITY_NO, UART1_SYNCMODE_CLOCK_DISABLE, UART1_MODE_TX_ENABLE);
+  UART1_Cmd(ENABLE);
 }
 /*
 *@brief: This function recieve data into UART
@@ -20,7 +20,8 @@ void vUART_Config(void){
 enum uart_state eUART_Recieve(void){
   enum uart_state eState = empty;
   if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
-    RXBuff[u8CountRecieve++] = UART1->DR;
+    uint8_t tData = UART1->DR;
+    UART1->DR = tData;
     eState = recieve;
   }
   return eState;
