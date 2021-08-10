@@ -1,4 +1,9 @@
-main.pbi: \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\io_macros.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
-  C:\dev\MCU\STM8\Serial_bootloader\main.c
+main.pbi: C:\dev\MCU\STM8\Serial_bootloader\src\main.c \
+  C:\dev\MCU\STM8\Serial_bootloader\inc\main.h \
+  C:\dev\MCU\STM8\Serial_bootloader\inc/stm8s_conf.h \
+  C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc\stm8s.h \
+  C:\dev\MCU\STM8\Serial_bootloader\inc\stm8s_conf.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
+  C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc\stm8s_clk.h \
+  C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc/stm8s.h \
+  C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc\stm8s_gpio.h
