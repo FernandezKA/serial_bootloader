@@ -1,4 +1,5 @@
-main.pbi: C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc\stm8s_uart1.h \
+main.pbi: C:\dev\MCU\STM8\Serial_bootloader\inc\base_logic.h \
+  C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc\stm8s_uart1.h \
   C:\dev\MCU\STM8\Serial_bootloader\inc\main.h \
   C:\dev\MCU\STM8\Serial_bootloader\inc\uart.h \
   C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc\stm8s_gpio.h \

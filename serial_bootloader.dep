@@ -601,7 +601,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 12 0 1 133 4 8 5 41</file>
+                    <file> 12 0 1 133 4 8 5 41 90</file>
                 </tool>
             </inputs>
         </file>
@@ -681,7 +681,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 12 0 1 133 4 8 5 41</file>
+                    <file> 12 0 1 133 4 8 5 41 90</file>
                 </tool>
             </inputs>
         </file>
@@ -750,7 +750,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 5 12 0 1 133 4 8 41</file>
+                    <file> 5 12 0 1 133 4 8 90 41</file>
                 </tool>
             </inputs>
         </file>

@@ -3,6 +3,6 @@
 #define BLOCK_SIZE 64
 #include "stm8s_conf.h"
 #include "uart.h"
-
+#include "base_logic.h"
 extern uint8_t RXBuff[BLOCK_SIZE];
 #endif

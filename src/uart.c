@@ -18,14 +18,17 @@ void vUART_Config(void){
 *@inval: none
 *@retval: enumerate of state recieve
 */
-enum uart_state eUART_Recieve(void){
-  enum uart_state eState = empty;
+void vUART_Recieve(void){
   if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
-    uint8_t tData = UART1->DR;
-    UART1->DR = tData;
-    eState = recieve;
+    RXBuff[u8CountRecieve++] = UART1->DR;
   }
-  return eState;
+  if(u8CountRecieve == 64){
+    eBuffState = complete;
+    u8CountRecieve = 0;
+  }
+  else{
+    eBuffState = few;
+  }
 }
 /*
 *@brief: this function transmit data at uart interface
@@ -35,4 +38,14 @@ enum uart_state eUART_Recieve(void){
 void vUART_Transmit(uint8_t data){
   while((UART1->SR&UART1_SR_TXE) != UART1_SR_TXE) asm("nop");
   UART1->DR = data;
+}
+/*
+*@brief: this function is IRQ at RXNE UART1
+*@retval: none
+*@inval: none
+*/
+//UART1 RX Interrupt routine.
+INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
+{
+	vUART_Recieve();
 }

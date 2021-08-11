@@ -31534,27 +31534,13 @@
     "scope": null
   },
   {
-    "ID": "c:@F@UART1_RX_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UART1_RX_IRQHandler(void)",
-    "location": {
-      "column": "1",
-      "line": "195",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
-    },
-    "name": "UART1_RX_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@I2C_IRQHandler",
     "What": "Function",
     "defdec": "Def",
     "display": "void I2C_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "222",
+      "line": "218",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "I2C_IRQHandler",
@@ -31568,7 +31554,7 @@
     "display": "void ADC1_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "275",
+      "line": "271",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "ADC1_IRQHandler",
@@ -31582,7 +31568,7 @@
     "display": "void TIM4_UPD_OVF_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "293",
+      "line": "289",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM4_UPD_OVF_IRQHandler",
@@ -31596,7 +31582,7 @@
     "display": "void EEPROM_EEC_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "302",
+      "line": "298",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EEPROM_EEC_IRQHandler",
@@ -38182,6 +38168,20 @@
     "scope": null
   },
   {
+    "ID": "c:@eBuffState",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "eBuffState",
+    "location": {
+      "column": "17",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+    },
+    "name": "eBuffState",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@SystemInit",
     "What": "Function",
     "defdec": "Def",
@@ -38238,6 +38238,78 @@
     "scope": null
   },
   {
+    "ID": "c:base_logic.h@32@macro@_base_logic_h_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_base_logic_h_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+    },
+    "name": "_base_logic_h_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@E@ebuffState",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "ebuffState",
+    "fields": [
+      {
+        "ID": "c:@E@ebuffState@few",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "few",
+        "location": {
+          "column": "3",
+          "line": "5",
+          "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+        },
+        "name": "few",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@ebuffState@complete",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "complete",
+        "location": {
+          "column": "3",
+          "line": "6",
+          "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+        },
+        "name": "complete",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "6",
+      "line": "4",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+    },
+    "name": "ebuffState",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@eBuffState",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "eBuffState",
+    "location": {
+      "column": "24",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+    },
+    "name": "eBuffState",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@RXBuff",
     "What": "Variable",
     "defdec": "Dec",
@@ -38280,44 +38352,16 @@
     "scope": null
   },
   {
-    "ID": "c:@F@eUART_Recieve",
+    "ID": "c:@F@vUART_Recieve",
     "What": "Function",
     "defdec": "Def",
-    "display": "enum uart_state eUART_Recieve(void)",
+    "display": "void vUART_Recieve(void)",
     "location": {
-      "column": "17",
+      "column": "6",
       "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
-    "name": "eUART_Recieve",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.c@581@F@eUART_Recieve@eState",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "eState",
-    "location": {
-      "column": "19",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "eState",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.c@671@F@eUART_Recieve@tData",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tData",
-    "location": {
-      "column": "13",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "tData",
+    "name": "vUART_Recieve",
     "origin": "project_file",
     "scope": null
   },
@@ -38328,10 +38372,24 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "35",
+      "line": "38",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Transmit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_RX_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART1_RX_IRQHandler(void)",
+    "location": {
+      "column": "1",
+      "line": "48",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "UART1_RX_IRQHandler",
     "origin": "project_file",
     "scope": null
   }
