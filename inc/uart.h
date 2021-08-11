@@ -11,7 +11,7 @@ enum uart_state{
 };
 //Function block
 void            vUART_Config(void);
-enum uart_state eUART_Recieve(void);
+uint8_t         u8UART_Recieve(void);
 void            vUART_Transmit(uint8_t data);
 
 #endif
