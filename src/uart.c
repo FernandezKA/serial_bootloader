@@ -1,7 +1,7 @@
 #include "uart.h"
 
-uint8_t RXBuff[64];
-uint8_t u8CountRecieve;
+//uint8_t RXBuff[64];
+//uint8_t u8CountRecieve;
 /*
 *@brief: This function configured UART interface
 *@inval: none
@@ -20,7 +20,9 @@ void vUART_Config(void){
 */
 void vUART_Recieve(void){
   if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
-    RXBuff[u8CountRecieve++] = UART1->DR;
+    uint8_t u8CurrData = UART1->DR;
+    u8BlockCRC^=u8CurrData;
+    RXBuff[u8CountRecieve++] = u8CurrData;
   }
   if(u8CountRecieve == 64){
     eBuffState = complete;
