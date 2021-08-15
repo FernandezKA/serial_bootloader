@@ -779,7 +779,7 @@
                 <expressions>
                     <item>u8CountRecieve</item>
                     <item>RXBuff</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

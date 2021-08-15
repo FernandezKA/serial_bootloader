@@ -3,17 +3,14 @@ uint8_t RXBuff[BLOCK_SIZE];
 uint8_t u8CountBlock = 0U;
 uint8_t u8CountRecieve = 0U;
 uint8_t u8BlockCRC = 0xFFU;
-uint8_t u8ACKRespond = 0xAAU;
-uint8_t u8NACKRespond = 0x55U;
-uint8_t u8RecieveCRC = 0xFFU;
-uint8_t u8ValidCRC = 0x00U;
 uint8_t u8ACKRequest = 0xABU;
+uint8_t u8CountEnd = 0; 
 int SystemInit(void)
 {
     CLK->CKDIVR = 2;
     vUART_Config();
     GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_SLOW);
-    GPIO_Init(GPIOD, GPIO_PIN_1, GPIO_MODE_IN_PU_NO_IT);
+    GPIO_Init(BOOT_PORT, GPIO_PIN_1, GPIO_MODE_IN_PU_NO_IT);
     asm("RIM");
     return 0;
 }
@@ -21,37 +18,20 @@ int SystemInit(void)
 void main(void)
 {
 	SystemInit();
+        uint8_t buff[64];
+        for(uint8_t i = 0; i < 64; ++i){
+            buff[i] = i;        
+        }
 	while (1){
           GPIOB->ODR^=(1<<5);
-          if(BOOT_PORT->IDR&BOOT_PIN == BOOT_PIN){
-            if(eBuffState == complete){
-              //TODO this we begin start write block
-                //send request from crc
-                UART1->DR = u8ACKRequest;
-                //recieve CRC
-                uint8_t bIsRecieve = 0x00U;
-                uint16_t u16WaitCounter = 0x0000U;
-                while(!bIsRecieve && u16WaitCounter < 0xFFFF - 1){
-                  ++u16WaitCounter;
-                  if(UART1->SR & UART1_SR_RXNE == UART1_SR_RXNE){
-                    bIsRecieve = 0xFFU;
-                    u8ValidCRC = UART1->DR;
-                  }
-                }
-                if(bIsRecieve && u8ValidCRC == u8RecieveCRC){
-                  UART1->DR = u8ACKRespond;
-                }
-                else{
-                  UART1->DR = u8NACKRespond;
-                }
-                bIsRecieve = 0x00U;
-                u16WaitCounter = 0x0000U;
-            } 
-          }
-          else{
-            asm("jp 0x8400");
-          }
-        };
+          FLASH_Unlock(FLASH_MEMTYPE_PROG);
+          FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_TPROG);
+          FLASH_ProgramBlock(50, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
+          FLASH_Lock(FLASH_MEMTYPE_DATA);
+          //FLASH -> CR2|= FLASH_CR2_WPRG;
+          //vFlashUnlock();
+          //vFlashWritePage((uint32_t) 0x00009000, RXBuff);
+        }
 }
 
 #ifdef USE_FULL_ASSERT

@@ -483,15 +483,15 @@
                 <option>
                     <name>OOCOutputFormat</name>
                     <version>2</version>
-                    <state>0</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>OCOutputOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>serial_bootloader.bin</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -499,7 +499,7 @@
                 </option>
                 <option>
                     <name>OOCObjCopyEnable</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -1880,6 +1880,9 @@
         <name>src</name>
         <file>
             <name>$PROJ_DIR$\src\base_logic.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\flash.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\main.c</name>

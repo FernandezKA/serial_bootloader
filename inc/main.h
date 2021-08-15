@@ -7,8 +7,9 @@
 #include "stm8s_conf.h"
 #include "uart.h"
 #include "base_logic.h"
+#include "flash.h"
 extern uint8_t RXBuff[BLOCK_SIZE];
 extern uint8_t u8CountBlock;
 extern uint8_t u8CountBlockReieved;
-extern uint8_t u8BlockCRC;
+extern uint8_t u8CountEnd;
 #endif

@@ -14,14 +14,20 @@ void vUART_Config(void){
   UART1_Cmd(ENABLE);
 }
 /*
-*@brief: This function recieve data into UART
-*@inval: none
+*@brief:  This function recieve data into UART
+*@inval:  none
 *@retval: enumerate of state recieve
 */
 void vUART_Recieve(void){
   if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
     uint8_t u8CurrData = UART1->DR;
-    u8BlockCRC^=u8CurrData;
+    if(u8CurrData == 0xFF){
+      ++u8CountEnd;
+      if(u8CountEnd == 4){
+        eBuffState = complete;
+        u8CountEnd = 0;
+      }
+    }
     RXBuff[u8CountRecieve++] = u8CurrData;
   }
   if(u8CountRecieve == 64){
@@ -33,8 +39,8 @@ void vUART_Recieve(void){
   }
 }
 /*
-*@brief: this function transmit data at uart interface
-*@inval: uint8_t transmitted data
+*@brief:  this function transmit data at uart interface
+*@inval:  uint8_t transmitted data
 *@retval: none
 */
 void vUART_Transmit(uint8_t data){
@@ -42,11 +48,10 @@ void vUART_Transmit(uint8_t data){
   UART1->DR = data;
 }
 /*
-*@brief: this function is IRQ at RXNE UART1
+*@brief:  this function is IRQ at RXNE UART1
 *@retval: none
-*@inval: none
+*@inval:  none
 */
-//UART1 RX Interrupt routine.
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
 	vUART_Recieve();

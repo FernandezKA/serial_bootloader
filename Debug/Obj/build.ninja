@@ -30,12 +30,13 @@ build stm8s_tim2.pbi : index stm8s_tim2.xcl
 build stm8s_tim4.pbi : index stm8s_tim4.xcl
 build stm8s_uart1.pbi : index stm8s_uart1.xcl
 build base_logic.pbi : index base_logic.xcl
+build flash.pbi : index flash.xcl
 build main.pbi : index main.xcl
 build uart.pbi : index uart.xcl
-build serial_bootloader_part0.pbi : link stm8s_clk.pbi stm8s_flash.pbi stm8s_gpio.pbi
-build serial_bootloader_part1.pbi : link stm8s_it.pbi stm8s_rst.pbi stm8s_tim1.pbi
-build serial_bootloader_part2.pbi : link stm8s_tim2.pbi stm8s_tim4.pbi stm8s_uart1.pbi
-build serial_bootloader_part3.pbi : link base_logic.pbi main.pbi uart.pbi
+build serial_bootloader_part0.pbi : link stm8s_clk.pbi stm8s_flash.pbi stm8s_gpio.pbi stm8s_it.pbi
+build serial_bootloader_part1.pbi : link stm8s_rst.pbi stm8s_tim1.pbi stm8s_tim2.pbi stm8s_tim4.pbi
+build serial_bootloader_part2.pbi : link stm8s_uart1.pbi base_logic.pbi flash.pbi main.pbi
+build serial_bootloader_part3.pbi : link uart.pbi
 build serial_bootloader.pbd : link serial_bootloader_part0.pbi serial_bootloader_part1.pbi serial_bootloader_part2.pbi serial_bootloader_part3.pbi
 build serial_bootloader.pbw : browsedata serial_bootloader.pbd
 
