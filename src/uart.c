@@ -19,7 +19,7 @@ void vUART_Config(void){
 *@retval: enumerate of state recieve
 */
 void vUART_Recieve(void){
-  if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
+  //if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
     uint8_t u8CurrData = UART1->DR;
     if(u8CurrData == 0xFF){
       ++u8CountEnd;
@@ -28,8 +28,7 @@ void vUART_Recieve(void){
         u8CountEnd = 0;
       }
     }
-    RXBuff[u8CountRecieve++] = u8CurrData;
-  }
+  RXBuff[u8CountRecieve++] = u8CurrData;
   if(u8CountRecieve == 64){
     eBuffState = complete;
     u8CountRecieve = 0;
@@ -54,6 +53,7 @@ void vUART_Transmit(uint8_t data){
 */
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
+        UART1->SR&=~UART1_SR_RXNE;
 	vUART_Recieve();
 }
  

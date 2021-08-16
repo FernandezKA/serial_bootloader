@@ -7,11 +7,11 @@ uint8_t u8ACKRequest = 0xABU;
 uint8_t u8CountEnd = 0; 
 int SystemInit(void)
 {
-    //CLK->CKDIVR = 2;
-    //vUART_Config();
+    CLK->CKDIVR = 2;
+    vUART_Config();
     GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_SLOW);
     GPIO_Init(BOOT_PORT, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
-    //asm("RIM");
+    asm("RIM");
     return 0;
 }
 
@@ -21,15 +21,11 @@ void main(void)
 	while (1){
           GPIOB->ODR^=(1<<5);
           if((BOOT_PORT->IDR & BOOT_PIN) == BOOT_PIN){//without bootloader
+            UART1->DR = 0x00;
             asm("nop");
           }else{//with bootloader
-            CLK->CKDIVR = 2;
-            vUART_Config();
-            vUART_Transmit('S');
-            vUART_Transmit('\n');
-            asm("RIM");
-            asm("nop");
-            //asm("jp 0x9000");
+            //UART1->DR = 0x01;
+            for(;;){}
           }
           /*FLASH_Unlock(FLASH_MEMTYPE_PROG);
           FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_TPROG);

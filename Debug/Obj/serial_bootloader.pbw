@@ -38862,7 +38862,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "43",
+      "line": "39",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -38940,7 +38940,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@631@F@vUART_Recieve@u8CurrData",
+    "ID": "c:uart.c@633@F@vUART_Recieve@u8CurrData",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CurrData",
@@ -38960,7 +38960,7 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "46",
+      "line": "45",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Transmit",
@@ -38974,7 +38974,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "55",
+      "line": "54",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",
