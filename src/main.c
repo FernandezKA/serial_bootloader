@@ -27,10 +27,8 @@ void main(void)
           FLASH_Unlock(FLASH_MEMTYPE_PROG);
           FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_TPROG);
           FLASH_ProgramBlock(50, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
+          FLASH_ProgramBlock(51, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
           FLASH_Lock(FLASH_MEMTYPE_DATA);
-          //FLASH -> CR2|= FLASH_CR2_WPRG;
-          //vFlashUnlock();
-          //vFlashWritePage((uint32_t) 0x00009000, RXBuff);
         }
 }
 
