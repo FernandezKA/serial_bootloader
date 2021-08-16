@@ -18,17 +18,18 @@ int SystemInit(void)
 void main(void)
 {
 	SystemInit();
-        uint8_t buff[64];
-        for(uint8_t i = 0; i < 64; ++i){
-            buff[i] = i;        
-        }
 	while (1){
           GPIOB->ODR^=(1<<5);
-          FLASH_Unlock(FLASH_MEMTYPE_PROG);
+          if((BOOT_PORT->IDR & BOOT_PIN) == BOOT_PIN){
+            
+          }else{
+            asm("jp 0x8000");
+          }
+          /*FLASH_Unlock(FLASH_MEMTYPE_PROG);
           FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_TPROG);
           FLASH_ProgramBlock(50, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
           FLASH_ProgramBlock(51, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
-          FLASH_Lock(FLASH_MEMTYPE_DATA);
+          FLASH_Lock(FLASH_MEMTYPE_DATA);*/
         }
 }
 

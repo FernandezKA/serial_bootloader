@@ -38856,41 +38856,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@465@F@main@buff",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "buff",
-    "location": {
-      "column": "17",
-      "line": "21",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "buff",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@496@F@main@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "21",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@assert_failed",
     "What": "Function",
     "defdec": "Def",
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "36",
+      "line": "37",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
