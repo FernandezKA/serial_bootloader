@@ -1,8 +1,8 @@
 #ifndef _main_h_
 #define _main_h_
 #define BLOCK_SIZE      64
-#define BOOT_PORT       GPIOD
-#define BOOT_PIN        0x01
+#define BOOT_PORT       GPIOC
+#define BOOT_PIN        0x80
 #define MAIN_ADDR       0x8400
 #include "stm8s_conf.h"
 #include "uart.h"
