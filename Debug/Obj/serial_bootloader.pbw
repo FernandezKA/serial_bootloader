@@ -38320,6 +38320,34 @@
     "scope": null
   },
   {
+    "ID": "c:@u8SoftSize",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8SoftSize",
+    "location": {
+      "column": "16",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
+    },
+    "name": "u8SoftSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8CRC",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8CRC",
+    "location": {
+      "column": "16",
+      "line": "9",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
+    },
+    "name": "u8CRC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@E@uart_state",
     "What": "Enum",
     "defdec": "Def",
@@ -38332,7 +38360,7 @@
         "display": "empty",
         "location": {
           "column": "3",
-          "line": "9",
+          "line": "12",
           "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
         },
         "name": "empty",
@@ -38346,7 +38374,7 @@
         "display": "recieve",
         "location": {
           "column": "3",
-          "line": "10",
+          "line": "13",
           "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
         },
         "name": "recieve",
@@ -38356,7 +38384,7 @@
     ],
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "11",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
     "name": "uart_state",
@@ -38370,7 +38398,7 @@
     "display": "void vUART_Config(void)",
     "location": {
       "column": "17",
-      "line": "13",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
     "name": "vUART_Config",
@@ -38384,7 +38412,7 @@
     "display": "void vUART_Config(void)",
     "location": {
       "column": "17",
-      "line": "13",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
     "name": "vUART_Config",
@@ -38398,7 +38426,7 @@
     "display": "uint8_t u8UART_Recieve(void)",
     "location": {
       "column": "17",
-      "line": "14",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
     "name": "u8UART_Recieve",
@@ -38412,7 +38440,7 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "17",
-      "line": "15",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
     "name": "vUART_Transmit",
@@ -38426,10 +38454,38 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "17",
-      "line": "15",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
     "name": "vUART_Transmit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@u8UART_WaitSize",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t u8UART_WaitSize(void)",
+    "location": {
+      "column": "17",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
+    },
+    "name": "u8UART_WaitSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@u8UART_WaitSize",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t u8UART_WaitSize(void)",
+    "location": {
+      "column": "17",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
+    },
+    "name": "u8UART_WaitSize",
     "origin": "user_include",
     "scope": null
   },
@@ -38862,7 +38918,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "39",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -38912,13 +38968,41 @@
     "scope": null
   },
   {
+    "ID": "c:@u8SoftSize",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8SoftSize",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "u8SoftSize",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8CRC",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8CRC",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "u8CRC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@vUART_Config",
     "What": "Function",
     "defdec": "Def",
     "display": "void vUART_Config(void)",
     "location": {
       "column": "6",
-      "line": "10",
+      "line": "9",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Config",
@@ -38932,7 +39016,7 @@
     "display": "void vUART_Recieve(void)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Recieve",
@@ -38940,13 +39024,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@633@F@vUART_Recieve@u8CurrData",
+    "ID": "c:uart.c@618@F@vUART_Recieve@u8CurrData",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CurrData",
     "location": {
       "column": "13",
-      "line": "23",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "u8CurrData",
@@ -38960,10 +39044,24 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "44",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Transmit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@u8UART_WaitSize",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t u8UART_WaitSize(void)",
+    "location": {
+      "column": "9",
+      "line": "53",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "u8UART_WaitSize",
     "origin": "project_file",
     "scope": null
   },
@@ -38974,7 +39072,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "54",
+      "line": "62",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",

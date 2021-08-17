@@ -24,7 +24,8 @@ void main(void)
             UART1->DR = 0x00;
             asm("nop");
           }else{//with bootloader
-            //UART1->DR = 0x01;
+            UART1->DR = 0xFF;//send respond for size
+            u8SoftSize = u8UART_WaitSize();
             for(;;){}
           }
           /*FLASH_Unlock(FLASH_MEMTYPE_PROG);

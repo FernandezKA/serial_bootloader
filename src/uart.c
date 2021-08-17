@@ -1,7 +1,6 @@
 #include "uart.h"
-
-//uint8_t RXBuff[64];
-//uint8_t u8CountRecieve;
+uint8_t u8SoftSize;
+uint8_t u8CRC;
 /*
 *@brief: This function configured UART interface
 *@inval: none
@@ -45,6 +44,15 @@ void vUART_Recieve(void){
 void vUART_Transmit(uint8_t data){
   while((UART1->SR&UART1_SR_TXE) != UART1_SR_TXE) asm("nop");
   UART1->DR = data;
+}
+/*
+*@brief:  this function receieve size of loaded soft
+*@retval: uint8_t count block
+*@inval:  none
+*/
+uint8_t u8UART_WaitSize(void){
+  while((UART1->SR&UART1_SR_RXNE) != UART1_SR_RXNE) asm("nop");
+  return UART1->DR;
 }
 /*
 *@brief:  this function is IRQ at RXNE UART1
