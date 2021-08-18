@@ -12,4 +12,7 @@ extern uint8_t RXBuff[BLOCK_SIZE];
 extern uint8_t u8CountBlock;
 extern uint8_t u8CountBlockReieved;
 extern uint8_t u8CountEnd;
+extern uint8_t u8BlockCRC;
+extern uint8_t u8CRC;
+uint8_t u8CRC_Calculate(uint8_t cCRC, uint8_t nData);
 #endif

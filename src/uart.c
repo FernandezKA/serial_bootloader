@@ -1,6 +1,5 @@
 #include "uart.h"
 uint8_t u8SoftSize;
-uint8_t u8CRC;
 uint8_t u8CountRecieveBlock = 0;
 /*
 *@brief: This function configured UART interface
@@ -21,10 +20,13 @@ void vUART_Config(void){
 void vUART_Recieve(void){
   //if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
   uint8_t u8CurrData = UART1->DR;
+  u8BlockCRC = u8CRC_Calculate(u8BlockCRC, u8CurrData);
   RXBuff[u8CountRecieve++] = u8CurrData;
   if(u8CountRecieve == 64){
     eBuffState = complete;
     u8CountRecieve = 0;
+    u8CRC = u8BlockCRC; 
+    u8BlockCRC = 0xFF;
   }
   else{
     eBuffState = few;

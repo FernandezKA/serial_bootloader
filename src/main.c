@@ -3,6 +3,7 @@ uint8_t RXBuff[BLOCK_SIZE];
 uint8_t u8CountBlock = 0U;
 uint8_t u8CountRecieve = 0U;
 uint8_t u8BlockCRC = 0xFFU;
+uint8_t u8CRC = 0xFF;
 uint8_t u8ACKRequest = 0xABU;
 uint32_t u32ProgAddr = 0x9000;
 int SystemInit(void)
