@@ -1,6 +1,7 @@
 #include "uart.h"
 uint8_t u8SoftSize;
 uint8_t u8CRC;
+uint8_t u8CountRecieveBlock = 0;
 /*
 *@brief: This function configured UART interface
 *@inval: none
@@ -19,14 +20,7 @@ void vUART_Config(void){
 */
 void vUART_Recieve(void){
   //if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
-    uint8_t u8CurrData = UART1->DR;
-    if(u8CurrData == 0xFF){
-      ++u8CountEnd;
-      if(u8CountEnd == 4){
-        eBuffState = complete;
-        u8CountEnd = 0;
-      }
-    }
+  uint8_t u8CurrData = UART1->DR;
   RXBuff[u8CountRecieve++] = u8CurrData;
   if(u8CountRecieve == 64){
     eBuffState = complete;
@@ -50,7 +44,7 @@ void vUART_Transmit(uint8_t data){
 *@retval: uint8_t count block
 *@inval:  none
 */
-uint8_t u8UART_WaitSize(void){
+uint8_t u8UART_RecieveNoIRQ(void){
   while((UART1->SR&UART1_SR_RXNE) != UART1_SR_RXNE) asm("nop");
   return UART1->DR;
 }

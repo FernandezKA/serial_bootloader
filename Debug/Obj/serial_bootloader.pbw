@@ -38348,6 +38348,34 @@
     "scope": null
   },
   {
+    "ID": "c:@u8CountRecieveBlock",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8CountRecieveBlock",
+    "location": {
+      "column": "16",
+      "line": "10",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
+    },
+    "name": "u8CountRecieveBlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8CountRecieveBlock",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8CountRecieveBlock",
+    "location": {
+      "column": "16",
+      "line": "10",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
+    },
+    "name": "u8CountRecieveBlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@E@uart_state",
     "What": "Enum",
     "defdec": "Def",
@@ -38462,30 +38490,30 @@
     "scope": null
   },
   {
-    "ID": "c:@F@u8UART_WaitSize",
+    "ID": "c:@F@u8UART_RecieveNoIRQ",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint8_t u8UART_WaitSize(void)",
+    "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "17",
       "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
-    "name": "u8UART_WaitSize",
+    "name": "u8UART_RecieveNoIRQ",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@u8UART_WaitSize",
+    "ID": "c:@F@u8UART_RecieveNoIRQ",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint8_t u8UART_WaitSize(void)",
+    "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "17",
       "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\uart.h"
     },
-    "name": "u8UART_WaitSize",
+    "name": "u8UART_RecieveNoIRQ",
     "origin": "user_include",
     "scope": null
   },
@@ -38612,20 +38640,6 @@
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountBlockReieved",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8CountEnd",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8CountEnd",
-    "location": {
-      "column": "16",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
-    },
-    "name": "u8CountEnd",
     "origin": "user_include",
     "scope": null
   },
@@ -38870,16 +38884,16 @@
     "scope": null
   },
   {
-    "ID": "c:@u8CountEnd",
+    "ID": "c:@u32ProgAddr",
     "What": "Variable",
     "defdec": "Def",
-    "display": "u8CountEnd",
+    "display": "u32ProgAddr",
     "location": {
-      "column": "9",
+      "column": "10",
       "line": "7",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
-    "name": "u8CountEnd",
+    "name": "u32ProgAddr",
     "origin": "project_file",
     "scope": null
   },
@@ -38918,7 +38932,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "40",
+      "line": "50",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -38996,13 +39010,27 @@
     "scope": null
   },
   {
+    "ID": "c:@u8CountRecieveBlock",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8CountRecieveBlock",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
+    },
+    "name": "u8CountRecieveBlock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@vUART_Config",
     "What": "Function",
     "defdec": "Def",
     "display": "void vUART_Config(void)",
     "location": {
       "column": "6",
-      "line": "9",
+      "line": "10",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Config",
@@ -39016,7 +39044,7 @@
     "display": "void vUART_Recieve(void)",
     "location": {
       "column": "6",
-      "line": "20",
+      "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Recieve",
@@ -39024,13 +39052,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@618@F@vUART_Recieve@u8CurrData",
+    "ID": "c:uart.c@650@F@vUART_Recieve@u8CurrData",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CurrData",
     "location": {
-      "column": "13",
-      "line": "22",
+      "column": "11",
+      "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "u8CurrData",
@@ -39044,7 +39072,7 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "44",
+      "line": "38",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Transmit",
@@ -39052,16 +39080,16 @@
     "scope": null
   },
   {
-    "ID": "c:@F@u8UART_WaitSize",
+    "ID": "c:@F@u8UART_RecieveNoIRQ",
     "What": "Function",
     "defdec": "Def",
-    "display": "uint8_t u8UART_WaitSize(void)",
+    "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "9",
-      "line": "53",
+      "line": "47",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
-    "name": "u8UART_WaitSize",
+    "name": "u8UART_RecieveNoIRQ",
     "origin": "project_file",
     "scope": null
   },
@@ -39072,7 +39100,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "62",
+      "line": "56",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",

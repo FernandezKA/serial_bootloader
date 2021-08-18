@@ -4,7 +4,7 @@ uint8_t u8CountBlock = 0U;
 uint8_t u8CountRecieve = 0U;
 uint8_t u8BlockCRC = 0xFFU;
 uint8_t u8ACKRequest = 0xABU;
-uint8_t u8CountEnd = 0; 
+uint32_t u32ProgAddr = 0x9000;
 int SystemInit(void)
 {
     CLK->CKDIVR = 2;
@@ -22,17 +22,27 @@ void main(void)
           GPIOB->ODR^=(1<<5);
           if((BOOT_PORT->IDR & BOOT_PIN) == BOOT_PIN){//without bootloader
             UART1->DR = 0x00;
-            asm("nop");
           }else{//with bootloader
             UART1->DR = 0xFF;//send respond for size
-            u8SoftSize = u8UART_WaitSize();
-            for(;;){}
+            asm("SIM");
+            u8SoftSize = u8UART_RecieveNoIRQ();//recieve size at block
+            asm("RIM");
+             while(eBuffState != complete){//recieve next data at IRQ
+              asm("nop");//if status is complete, disable IRQ and check CRC
+            }
+            asm("SIM");
+            u8CRC = u8UART_RecieveNoIRQ();//Recieve CRC         
+            //TODO add check CRC
+            if(u8CountRecieveBlock < u8SoftSize){//Increment block, write flash
+              u8CountRecieveBlock++;
+              FLASH_Unlock(FLASH_MEMTYPE_PROG);
+              FLASH_ProgramBlock(((u32ProgAddr - 0x8000)/64) + u8CountRecieveBlock, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+              FLASH_Lock(FLASH_MEMTYPE_DATA);
+            }
+            else{
+              
+            }
           }
-          /*FLASH_Unlock(FLASH_MEMTYPE_PROG);
-          FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_TPROG);
-          FLASH_ProgramBlock(50, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
-          FLASH_ProgramBlock(51, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, buff);
-          FLASH_Lock(FLASH_MEMTYPE_DATA);*/
         }
 }
 
