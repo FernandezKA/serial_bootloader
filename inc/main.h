@@ -14,5 +14,7 @@ extern uint8_t u8CountBlockReieved;
 extern uint8_t u8CountEnd;
 extern uint8_t u8BlockCRC;
 extern uint8_t u8CRC;
+extern uint8_t u8BootVersion;
+extern uint8_t u8SoftVersion;
 uint8_t u8CRC_Calculate(uint8_t cCRC, uint8_t nData);
 #endif

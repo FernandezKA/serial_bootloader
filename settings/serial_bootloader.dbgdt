@@ -792,7 +792,7 @@
                     <item>RXBuff</item>
                     <item>eBuffState</item>
                     <item>u8CountRecieve</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
