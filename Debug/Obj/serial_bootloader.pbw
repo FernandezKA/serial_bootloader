@@ -39164,13 +39164,41 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@924@F@main@RecieveSoftware",
+    "ID": "c:main.c@924@F@main@SoftSize",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SoftSize",
+    "location": {
+      "column": "17",
+      "line": "39",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "SoftSize",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@955@F@main@u8CountRecieve",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8CountRecieve",
+    "location": {
+      "column": "17",
+      "line": "40",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "u8CountRecieve",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@992@F@main@RecieveSoftware",
     "What": "Variable",
     "defdec": "Def",
     "display": "RecieveSoftware",
     "location": {
       "column": "14",
-      "line": "39",
+      "line": "41",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "RecieveSoftware",
@@ -39178,16 +39206,72 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@996@F@main@Request",
+    "ID": "c:main.c@1086@F@main@Request",
     "What": "Variable",
     "defdec": "Def",
     "display": "Request",
     "location": {
       "column": "19",
-      "line": "41",
+      "line": "43",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "Request",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1899@F@main@u8dCRC",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8dCRC",
+    "location": {
+      "column": "23",
+      "line": "67",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "u8dCRC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1937@F@main@u8CRC",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8CRC",
+    "location": {
+      "column": "23",
+      "line": "68",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "u8CRC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1978@F@main@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "27",
+      "line": "69",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@2318@F@main@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "29",
+      "line": "79",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "i",
     "origin": "project_file",
     "scope": null
   },
@@ -39198,7 +39282,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "66",
+      "line": "97",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",

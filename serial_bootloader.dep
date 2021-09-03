@@ -373,6 +373,10 @@
                     <file> 62</file>
                 </tool>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 35</file>
+                </tool>
+                <tool>
                     <name>BICOMP</name>
                     <file> 37</file>
                 </tool>
