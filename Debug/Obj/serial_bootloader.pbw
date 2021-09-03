@@ -39164,30 +39164,30 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@904@F@main@u8CurrentRequest",
+    "ID": "c:main.c@924@F@main@RecieveSoftware",
     "What": "Variable",
     "defdec": "Def",
-    "display": "u8CurrentRequest",
+    "display": "RecieveSoftware",
     "location": {
-      "column": "15",
+      "column": "14",
       "line": "39",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
-    "name": "u8CurrentRequest",
+    "name": "RecieveSoftware",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:main.c@2618@F@main@i",
+    "ID": "c:main.c@996@F@main@Request",
     "What": "Variable",
     "defdec": "Def",
-    "display": "i",
+    "display": "Request",
     "location": {
-      "column": "22",
-      "line": "91",
+      "column": "19",
+      "line": "41",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
-    "name": "i",
+    "name": "Request",
     "origin": "project_file",
     "scope": null
   },
@@ -39198,7 +39198,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "109",
+      "line": "66",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",

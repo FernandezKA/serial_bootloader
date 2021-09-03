@@ -57,7 +57,6 @@ uint8_t u8UART_RecieveNoIRQ(void){
 */
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
-        UART1->SR&=~UART1_SR_RXNE;
+        UART1->SR&=~UART1_SR_RXNE; 
 	vUART_Recieve();
 }
- 
