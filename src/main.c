@@ -35,12 +35,13 @@ void main(void)
     }
     else
     { //with bootloader
-      while(1){//Check for new data
+      asm("SIM");
         uint8_t SoftSize = 0;
         uint8_t u8CountRecieve = 0;
         bool RecieveSoftware = FALSE;
+        uint8_t Request = 0x00;
+      while(1){//Check for new data
         if(!RecieveSoftware){//Detect device action
-          uint8_t Request = 0x00;
           Request = u8UART_RecieveNoIRQ();
           switch(Request){
           case 0x01://Detect device
@@ -55,7 +56,6 @@ void main(void)
           case 0x04://Begin soft recieve
             vUART_Transmit(u8ACK);
             SoftSize = u8UART_RecieveNoIRQ();
-            vUART_Transmit(u8ACK);
             RecieveSoftware = TRUE;
             break;
           }
@@ -73,6 +73,11 @@ void main(void)
               if(u8CRC == u8dCRC){
                 ++u8CountRecieve;
                 vUART_Transmit(u8ACK);
+                asm("SIM");
+                FLASH_Unlock(FLASH_MEMTYPE_PROG);
+                FLASH_ProgramBlock(((u32ProgAddr - 0x8000)/64) + u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                FLASH_Lock(FLASH_MEMTYPE_PROG);
+                asm("RIM");
               }
               else{
                 vUART_Transmit(u8NACK);
@@ -80,11 +85,11 @@ void main(void)
                   RXBuff[i] = 0x00;
                 }
               }
-              if(u8CountRecieve == SoftSize){
+              if(u8CountRecieve == SoftSize&&SoftSize != 0){
                 vUART_Transmit(u8ACK);
                 RecieveSoftware = FALSE;
                 asm("SIM");
-                asm("jp 0x9000");
+                //asm("jp 0x9000");
               }
             }
           }
