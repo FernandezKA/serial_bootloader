@@ -50,7 +50,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>610764561</Checksum>
+        <Checksum>3073652427</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -63,6 +63,12 @@
         <GraphEnabled>0</GraphEnabled>
         <ShowTimeLog>1</ShowTimeLog>
     </DataSample>
+    <Breakpoints>
+        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.100.3" 1 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.100.3" 1 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.45.11" 1 0 0 0 "" 0 ""</Bp2>
+        <Count>3</Count>
+    </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -72,11 +78,6 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
-    <Breakpoints>
-        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.89.17" 1 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.75.17" 1 0 0 0 "" 0 ""</Bp1>
-        <Count>2</Count>
-    </Breakpoints>
     <Aliases>
         <Count>0</Count>
         <SuppressDialog>0</SuppressDialog>

@@ -16,5 +16,9 @@ extern uint8_t u8BlockCRC;
 extern uint8_t u8CRC;
 extern uint8_t u8BootVersion;
 extern uint8_t u8SoftVersion;
+extern bool RecieveSoftware;
+extern uint8_t u8CountRequest;
+extern uint8_t Request;
+extern uint8_t u8SoftSize;
 uint8_t u8CRC_Calculate(uint8_t cCRC, uint8_t nData);
 #endif

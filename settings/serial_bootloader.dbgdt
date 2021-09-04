@@ -791,7 +791,7 @@
                 <expressions>
                     <item>u8CurrentRequest</item>
                     <item>SoftSize</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

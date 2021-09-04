@@ -1,5 +1,4 @@
 #include "uart.h"
-uint8_t u8SoftSize;
 uint8_t u8CountRecieveBlock = 0;
 /*
 *@brief: This function configured UART interface
@@ -58,5 +57,14 @@ uint8_t u8UART_RecieveNoIRQ(void){
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
         UART1->SR&=~UART1_SR_RXNE; 
-	vUART_Recieve();
+        if(RecieveSoftware){//
+          if(u8SoftSize == 0x00){
+            u8SoftSize = UART1->DR;
+          }
+          vUART_Recieve();
+        }
+        else{
+          Request = UART1->DR;
+          ++u8CountRequest;
+        }
 }

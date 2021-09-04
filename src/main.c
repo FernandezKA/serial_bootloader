@@ -12,6 +12,10 @@ uint8_t u8NACK = 0x65U;
 uint32_t u32ProgAddr = 0x9000;
 uint8_t u8SoftVersion = 0x01;
 uint8_t u8BootVersion = 0x01;
+uint8_t u8CountRequest = 0x00;
+bool RecieveSoftware = FALSE;
+uint8_t u8SoftSize = 0x00;
+uint8_t Request = 0x00;
 /*********************************/
 int SystemInit(void)
 {
@@ -35,49 +39,41 @@ void main(void)
     }
     else
     { //with bootloader
-      asm("SIM");
         uint8_t SoftSize = 0;
         uint8_t u8CountRecieve = 0;
-        bool RecieveSoftware = FALSE;
-        uint8_t Request = 0x00;
       while(1){//Check for new data
-        if(!RecieveSoftware){//Detect device action
-          Request = u8UART_RecieveNoIRQ();
+        if(!RecieveSoftware&&u8CountRequest > 0){
+          --u8CountRequest;
           switch(Request){
-          case 0x01://Detect device
+          case 0x01:
             vUART_Transmit(u8ACK);
             break;
-          case 0x02://Check boot version
+          case 0x02:
             vUART_Transmit(u8BootVersion);
             break;
-          case 0x03://Check soft version
+          case 0x03:
             vUART_Transmit(u8SoftVersion);
             break;
-          case 0x04://Begin soft recieve
+          case 0x04:
             vUART_Transmit(u8ACK);
-            SoftSize = u8UART_RecieveNoIRQ();
             RecieveSoftware = TRUE;
             break;
           }
         }
-        else{//Recieve software and write flash action
-          asm("RIM");
-          while(RecieveSoftware){
-            if(eBuffState == complete){
+        else{
+          if(eBuffState == complete){
               uint8_t u8dCRC = 0xFF;
               uint8_t u8CRC = 0xFF;
-              for(uint8_t i = 0; i < 64; ++i){
+              for(uint8_t i = 0; i < 64; ++i){//Check CRC8
                 u8dCRC^=RXBuff[i]; 
               }
-              u8CRC = u8UART_RecieveNoIRQ();
-              if(u8CRC == u8dCRC){
+              u8CRC = u8UART_RecieveNoIRQ();//Recieve CRC from PC
+              if(u8CRC == u8dCRC){//If block is valid
                 ++u8CountRecieve;
-                vUART_Transmit(u8ACK);
-                asm("SIM");
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
                 FLASH_ProgramBlock(((u32ProgAddr - 0x8000)/64) + u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
-                asm("RIM");
+                vUART_Transmit(u8ACK);
               }
               else{
                 vUART_Transmit(u8NACK);
@@ -89,10 +85,10 @@ void main(void)
                 vUART_Transmit(u8ACK);
                 RecieveSoftware = FALSE;
                 asm("SIM");
+                //TODO Add rejamp to main programm address
                 //asm("jp 0x9000");
               }
-            }
-          }
+           }
         }
       }
     }
