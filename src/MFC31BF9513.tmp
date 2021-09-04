@@ -42,7 +42,6 @@ void main(void)
         uint8_t SoftSize = 0;
         uint8_t u8CountRecieve = 0;
       while(1){//Check for new data
-        /*******************************************/
         if(!RecieveSoftware&&u8CountRequest > 0){
           --u8CountRequest;
           switch(Request){
@@ -61,17 +60,13 @@ void main(void)
             break;
           }
         }
-       /*******************************************/
-        else if(RecieveSoftware){
-          if(u8CountBlock > 0/*eBuffState == complete*/){
-              --u8CountBlock;
+        else{
+          if(eBuffState == complete){
               uint8_t u8dCRC = 0xFF;
               uint8_t u8CRC = 0xFF;
               for(uint8_t i = 0; i < 64; ++i){//Check CRC8
                 u8dCRC^=RXBuff[i]; 
               }
-              asm("SIM");
-              vUART_Transmit(u8NACK);
               u8CRC = u8UART_RecieveNoIRQ();//Recieve CRC from PC
               if(u8CRC == u8dCRC){//If block is valid
                 ++u8CountRecieve;
@@ -79,14 +74,12 @@ void main(void)
                 //FLASH_ProgramBlock(((u32ProgAddr - 0x8000)/64) + u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 //FLASH_Lock(FLASH_MEMTYPE_PROG);
                 vUART_Transmit(u8ACK);
-                asm("RIM");
               }
               else{
                 vUART_Transmit(u8NACK);
                 for(uint8_t i = 0; i < 64; ++i){//Clear buffer
                   RXBuff[i] = 0x00;
                 }
-                asm("RIM");
               }
               if(u8CountRecieve == SoftSize&&SoftSize != 0){
                 vUART_Transmit(u8ACK);

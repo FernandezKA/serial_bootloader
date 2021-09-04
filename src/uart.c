@@ -19,13 +19,12 @@ void vUART_Config(void){
 void vUART_Recieve(void){
   //if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
   uint8_t u8CurrData = UART1->DR;
-  u8BlockCRC = u8CRC_Calculate(u8BlockCRC, u8CurrData);
   RXBuff[u8CountRecieve++] = u8CurrData;
   if(u8CountRecieve == 64){
+    ++u8CountBlock;
     eBuffState = complete;
     u8CountRecieve = 0;
-    u8CRC = u8BlockCRC; 
-    u8BlockCRC = 0xFF;
+    //asm("SIM");
   }
   else{
     eBuffState = few;
@@ -61,7 +60,9 @@ INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
           if(u8SoftSize == 0x00){
             u8SoftSize = UART1->DR;
           }
-          vUART_Recieve();
+          else{
+           vUART_Recieve(); 
+          }
         }
         else{
           Request = UART1->DR;
