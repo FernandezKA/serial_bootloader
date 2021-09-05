@@ -88,9 +88,6 @@ void main(void)
                 }
                 asm("RIM");
               }
-              if(u8CountRecieve == 7){
-                asm("nop");
-              }
               if(u8CountRecieve == u8SoftSize&&u8SoftSize != 0){
                 vUART_Transmit(u8ACK);
                 RecieveSoftware = FALSE;
