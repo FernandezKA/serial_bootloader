@@ -75,9 +75,9 @@ void main(void)
               u8CRC = u8UART_RecieveNoIRQ();//Recieve CRC from PC
               if(u8CRC == u8dCRC){//If block is valid
                 ++u8CountRecieve;
-                //FLASH_Unlock(FLASH_MEMTYPE_PROG);
-                //FLASH_ProgramBlock(((u32ProgAddr - 0x8000)/64) + u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
-                //FLASH_Lock(FLASH_MEMTYPE_PROG);
+                FLASH_Unlock(FLASH_MEMTYPE_PROG);
+                FLASH_ProgramBlock(((u32ProgAddr - 0x8000)/64) + u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                FLASH_Lock(FLASH_MEMTYPE_PROG);
                 vUART_Transmit(u8ACK);
                 asm("RIM");
               }
@@ -88,7 +88,10 @@ void main(void)
                 }
                 asm("RIM");
               }
-              if(u8CountRecieve == SoftSize&&SoftSize != 0){
+              if(u8CountRecieve == 7){
+                asm("nop");
+              }
+              if(u8CountRecieve == u8SoftSize&&u8SoftSize != 0){
                 vUART_Transmit(u8ACK);
                 RecieveSoftware = FALSE;
                 asm("SIM");
