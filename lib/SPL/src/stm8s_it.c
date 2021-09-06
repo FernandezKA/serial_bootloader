@@ -5,6 +5,7 @@
 //TRAP Interrupt routine
 INTERRUPT_HANDLER_TRAP(TRAP_IRQHandler)
 {
+    asm("jp 0x9000");
 	while (1){};  
 }
 #endif

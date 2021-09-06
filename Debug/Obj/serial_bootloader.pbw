@@ -26186,7 +26186,7 @@
     "display": "void TLI_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "14",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TLI_IRQHandler",
@@ -26200,7 +26200,7 @@
     "display": "void AWU_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "23",
+      "line": "24",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "AWU_IRQHandler",
@@ -26214,7 +26214,7 @@
     "display": "void CLK_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "31",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "CLK_IRQHandler",
@@ -26228,7 +26228,7 @@
     "display": "void EXTI_PORTA_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "39",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTA_IRQHandler",
@@ -26242,7 +26242,7 @@
     "display": "void EXTI_PORTB_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "47",
+      "line": "48",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTB_IRQHandler",
@@ -26256,7 +26256,7 @@
     "display": "void EXTI_PORTC_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "55",
+      "line": "56",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTC_IRQHandler",
@@ -26270,7 +26270,7 @@
     "display": "void EXTI_PORTD_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "63",
+      "line": "64",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTD_IRQHandler",
@@ -26284,7 +26284,7 @@
     "display": "void EXTI_PORTE_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "71",
+      "line": "72",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTE_IRQHandler",
@@ -26298,7 +26298,7 @@
     "display": "void SPI_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "108",
+      "line": "109",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "SPI_IRQHandler",
@@ -26312,7 +26312,7 @@
     "display": "void TIM1_UPD_OVF_TRG_BRK_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "116",
+      "line": "117",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM1_UPD_OVF_TRG_BRK_IRQHandler",
@@ -26326,7 +26326,7 @@
     "display": "void TIM1_CAP_COM_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "124",
+      "line": "125",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM1_CAP_COM_IRQHandler",
@@ -26340,7 +26340,7 @@
     "display": "void TIM2_UPD_OVF_BRK_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "149",
+      "line": "150",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM2_UPD_OVF_BRK_IRQHandler",
@@ -26354,7 +26354,7 @@
     "display": "void TIM2_CAP_COM_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "157",
+      "line": "158",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM2_CAP_COM_IRQHandler",
@@ -26368,7 +26368,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "187",
+      "line": "188",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -26382,7 +26382,7 @@
     "display": "void I2C_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "218",
+      "line": "219",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "I2C_IRQHandler",
@@ -26396,7 +26396,7 @@
     "display": "void ADC1_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "271",
+      "line": "272",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "ADC1_IRQHandler",
@@ -26410,7 +26410,7 @@
     "display": "void TIM4_UPD_OVF_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "289",
+      "line": "290",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM4_UPD_OVF_IRQHandler",
@@ -26424,7 +26424,7 @@
     "display": "void EEPROM_EEC_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "298",
+      "line": "299",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EEPROM_EEC_IRQHandler",
@@ -38914,7 +38914,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "30",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "main",
@@ -38922,27 +38922,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1003@F@main@SoftSize",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SoftSize",
-    "location": {
-      "column": "17",
-      "line": "42",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "SoftSize",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1034@F@main@u8CountRecieve",
+    "ID": "c:main.c@1246@F@main@u8CountRecieve",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CountRecieve",
     "location": {
       "column": "17",
-      "line": "43",
+      "line": "50",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8CountRecieve",
@@ -38950,13 +38936,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1845@F@main@u8dCRC",
+    "ID": "c:main.c@2102@F@main@u8dCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8dCRC",
     "location": {
       "column": "23",
-      "line": "68",
+      "line": "76",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8dCRC",
@@ -38964,13 +38950,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1883@F@main@u8CRC",
+    "ID": "c:main.c@2140@F@main@u8CRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CRC",
     "location": {
       "column": "23",
-      "line": "69",
+      "line": "77",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8CRC",
@@ -38978,13 +38964,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1924@F@main@i",
+    "ID": "c:main.c@2181@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "27",
-      "line": "70",
+      "line": "78",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -38992,13 +38978,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2650@F@main@i",
+    "ID": "c:main.c@2915@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "29",
-      "line": "86",
+      "line": "94",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -39012,7 +38998,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "105",
+      "line": "117",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -39020,72 +39006,102 @@
     "scope": null
   },
   {
-    "ID": "c:flash.h@27@macro@_flash_h_",
+    "ID": "c:@eBuffState",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "eBuffState",
+    "location": {
+      "column": "17",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+    },
+    "name": "eBuffState",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@u8CRC_Calculate",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t u8CRC_Calculate(uint8_t, uint8_t)",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+    },
+    "name": "u8CRC_Calculate",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:base_logic.h@32@macro@_base_logic_h_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_flash_h_",
+    "display": "_base_logic_h_",
     "location": {
       "column": "9",
       "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
     },
-    "name": "_flash_h_",
+    "name": "_base_logic_h_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@vFlashUnlock",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashUnlock(void)",
+    "ID": "c:@E@ebuffState",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "ebuffState",
+    "fields": [
+      {
+        "ID": "c:@E@ebuffState@few",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "few",
+        "location": {
+          "column": "3",
+          "line": "5",
+          "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+        },
+        "name": "few",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@ebuffState@complete",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "complete",
+        "location": {
+          "column": "3",
+          "line": "6",
+          "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+        },
+        "name": "complete",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
       "column": "6",
-      "line": "5",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+      "line": "4",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
     },
-    "name": "vFlashUnlock",
+    "name": "ebuffState",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@vFlashUnlock",
-    "What": "Function",
+    "ID": "c:@eBuffState",
+    "What": "Variable",
     "defdec": "Dec",
-    "display": "void vFlashUnlock(void)",
+    "display": "eBuffState",
     "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+      "column": "24",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
     },
-    "name": "vFlashUnlock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashWritePage",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "vFlashWritePage",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashWritePage",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "vFlashWritePage",
+    "name": "eBuffState",
     "origin": "user_include",
     "scope": null
   },
@@ -39414,102 +39430,72 @@
     "scope": null
   },
   {
-    "ID": "c:@eBuffState",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "eBuffState",
-    "location": {
-      "column": "17",
-      "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
-    },
-    "name": "eBuffState",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@u8CRC_Calculate",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t u8CRC_Calculate(uint8_t, uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "3",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
-    },
-    "name": "u8CRC_Calculate",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:base_logic.h@32@macro@_base_logic_h_",
+    "ID": "c:flash.h@27@macro@_flash_h_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_base_logic_h_",
+    "display": "_flash_h_",
     "location": {
       "column": "9",
       "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
     },
-    "name": "_base_logic_h_",
+    "name": "_flash_h_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@E@ebuffState",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "ebuffState",
-    "fields": [
-      {
-        "ID": "c:@E@ebuffState@few",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "few",
-        "location": {
-          "column": "3",
-          "line": "5",
-          "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
-        },
-        "name": "few",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@ebuffState@complete",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "complete",
-        "location": {
-          "column": "3",
-          "line": "6",
-          "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
-        },
-        "name": "complete",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "ID": "c:@F@vFlashUnlock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void vFlashUnlock(void)",
     "location": {
       "column": "6",
-      "line": "4",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+      "line": "5",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
     },
-    "name": "ebuffState",
+    "name": "vFlashUnlock",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@eBuffState",
-    "What": "Variable",
+    "ID": "c:@F@vFlashUnlock",
+    "What": "Function",
     "defdec": "Dec",
-    "display": "eBuffState",
+    "display": "void vFlashUnlock(void)",
     "location": {
-      "column": "24",
-      "line": "8",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
+      "column": "6",
+      "line": "5",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
     },
-    "name": "eBuffState",
+    "name": "vFlashUnlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vFlashWritePage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+    },
+    "name": "vFlashWritePage",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vFlashWritePage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+    },
+    "name": "vFlashWritePage",
     "origin": "user_include",
     "scope": null
   },
