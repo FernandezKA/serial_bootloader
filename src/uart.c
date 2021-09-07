@@ -16,9 +16,9 @@ void vUART_Config(void){
 *@inval:  none
 *@retval: enumerate of state recieve
 */
-void vUART_Recieve(void){
+void vUART_Recieve(uint8_t data){
   //if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
-  uint8_t u8CurrData = UART1->DR;
+  uint8_t u8CurrData = data;
   RXBuff[u8CountRecieve++] = u8CurrData;
   if(u8CountRecieve == 64){
     ++u8CountBlock;
@@ -61,7 +61,7 @@ INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
             u8SoftSize = UART1->DR;
           }
           else{
-           vUART_Recieve(); 
+           //vUART_Recieve(); 
           }
         }
         else{

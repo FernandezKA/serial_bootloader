@@ -187,7 +187,9 @@ INTERRUPT_HANDLER(TIM3_CAP_COM_IRQHandler, 16)
 //UART1 TX Interrupt routine.
 INTERRUPT_HANDLER(UART1_TX_IRQHandler, 17)
 {
-	while (1){};
+	while (1){
+        asm("nop");
+        };
 }
 #endif
 

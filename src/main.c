@@ -9,7 +9,7 @@ uint8_t u8CRC = 0xFF;
 uint8_t u8rCRC = 0xFF;
 uint8_t u8ACK = 0x55U;
 uint8_t u8NACK = 0x65U;
-uint32_t u32ProgAddr = 0x9000;
+uint32_t u32ProgAddr = 0x8040;
 uint8_t u8SoftVersion = 0x01;
 uint8_t u8BootVersion = 0x01;
 uint8_t u8CountRequest = 0x00;
@@ -25,7 +25,7 @@ int SystemInit(void)
   GPIO_Init(BOOT_PORT, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
   //FLASH_DeInit();
   //FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_TPROG);
-  asm("RIM");
+  //asm("RIM");
   return 0;
 }
 
@@ -42,16 +42,81 @@ void main(void)
       asm("LD  A,  $FF");
       asm("LD  XL, A  ");
       asm("LDW SP, X  ");
-      asm("JP 0x8001");
+      asm("JP $8040");
     }
     else
     { //with bootloader
         //uint8_t SoftSize = 0;
         uint8_t u8CountRecieve = 0;
-      while(1){//Check for new data
-        /*******************************************/
-        if(!RecieveSoftware&&u8CountRequest > 0){
-          --u8CountRequest;
+        uint8_t Request = 0x00;
+        for(;;){
+          while(Request == 0x00){
+            //UART1->DR = 0x64;
+             if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
+              Request = UART1->DR;
+              }
+             switch(Request){
+             case 0x01:
+               vUART_Transmit(u8ACK);
+               Request = 0x00;
+               break;
+             case 0x02:
+               vUART_Transmit(u8BootVersion);
+               Request = 0x00;
+               break;
+             case 0x03:
+               vUART_Transmit(u8BootVersion);
+               Request = 0x00;              
+               break;
+             case 0x04:
+               vUART_Transmit(u8ACK);
+               uint8_t u8SoftSize = u8UART_RecieveNoIRQ();
+               uint8_t u8SoftRecieve = 0x00;
+               uint8_t u8dCRC = 0xFF;
+               uint8_t u8CRC = 0xFF;
+               while(u8SoftRecieve < u8SoftSize){
+                 while(eBuffState != complete){
+                 if((UART1->SR&UART1_SR_RXNE) == UART1_SR_RXNE){
+                   uint8_t u8RecieveData = UART1->DR;
+                   vUART_Recieve(u8RecieveData);
+                   u8dCRC^=u8RecieveData;
+                    }
+                  }
+                  vUART_Transmit(u8NACK);
+                  u8CRC = u8UART_RecieveNoIRQ();
+                 if(u8dCRC == u8CRC){
+                   ++u8CountRecieve;
+                   FLASH_Unlock(FLASH_MEMTYPE_PROG);
+                   FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                   FLASH_Lock(FLASH_MEMTYPE_PROG);
+                   u8dCRC = 0xFF;
+                   u8CRC = 0xFF;
+                   eBuffState = few;
+                   vUART_Transmit(u8ACK);
+                 }
+                 else{
+                   vUART_Transmit(u8NACK);
+                 }
+               }
+               Request = 0x00;
+               break;
+             default:
+               Request = 0x00;
+              break;
+             }
+          }
+        }
+    }
+  }
+}
+     /* while(1){//Check for new data
+        //if(!RecieveSoftware&&u8CountRequest > 0){
+          //--u8CountRequest;
+        
+        while(Request == 0x00){
+          if(UART1->SR&UART1_SR_RXNE == UART1_SR_RXNE){
+            Request = UART1->DR;
+          }
           switch(Request){
           case 0x01:
             vUART_Transmit(u8ACK);
@@ -68,10 +133,9 @@ void main(void)
             break;
           }
         }
-       /*******************************************/
         else if(RecieveSoftware){
           FLASH_Unlock(FLASH_MEMTYPE_PROG);
-          if(u8CountBlock > 0/*eBuffState == complete*/){
+          if(u8CountBlock > 0){
               --u8CountBlock;
               uint8_t u8dCRC = 0xFF;
               uint8_t u8CRC = 0xFF;
@@ -105,14 +169,14 @@ void main(void)
                 asm("LD  A,  $FF");
                 asm("LD  XL, A  ");
                 asm("LDW SP, X  ");
-                asm("JP $8000");
+                asm("JP $800A");
               }
            }
         }
       }
     }
   }
-}
+*/
 #ifdef USE_FULL_ASSERT
 void assert_failed(u8 *file, u32 line)
 {
