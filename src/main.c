@@ -35,14 +35,14 @@ void main(void)
   while (1)
   {
     //GPIOB->ODR^=(1<<5);
-    if ((BOOT_PORT->IDR & BOOT_PIN) == BOOT_PIN)
+    if ((BOOT_PORT->IDR & BOOT_PIN) == BOOT_PIN)//Warning! For simulation edit at !=, correctly ==
     { //without bootloader
       UART1->DR = 0x00;
       asm("LDW X,  SP ");
       asm("LD  A,  $FF");
       asm("LD  XL, A  ");
       asm("LDW SP, X  ");
-      asm("JP 0x9000");
+      asm("JP 0x8001");
     }
     else
     { //with bootloader
@@ -105,7 +105,7 @@ void main(void)
                 asm("LD  A,  $FF");
                 asm("LD  XL, A  ");
                 asm("LDW SP, X  ");
-                asm("JPF $9000");
+                asm("JP $8000");
               }
            }
         }
