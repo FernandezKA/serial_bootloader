@@ -98,6 +98,8 @@ void main(void)
                    vUART_Transmit(u8NACK);
                  }
                }
+               u8SoftRecieve = 0x00;
+               u8SoftSize = 0x00;
                Request = 0x00;
                break;
              default:
