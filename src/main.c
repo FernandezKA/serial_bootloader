@@ -94,7 +94,7 @@ void main(void)
               {
                 //++u8SoftRecieve;?
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
-                FLASH_ProgramBlock(++u8SoftRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                FLASH_ProgramBlock(u8SoftRecieve++, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
                 u8rCRC = 0xFF;
                 u8CRC = 0xFF;
@@ -109,7 +109,7 @@ void main(void)
             //u8SoftRecieve = 0x00;
             //u8SoftSize = 0x00;
             //Request = 0x00;
-            asm("jp 0x8040");
+            asm("jp 0x8000");
             break;
           default:
             Request = 0x00;
