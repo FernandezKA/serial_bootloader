@@ -1,13 +1,16 @@
 #ifndef _main_h_
 #define _main_h_
+//User definitions
 #define BLOCK_SIZE      64
 #define BOOT_PORT       GPIOC
 #define BOOT_PIN        0x80
-#define MAIN_ADDR       0x8400
+#define MAIN_ADDR       0x8040
+//User include
 #include "stm8s_conf.h"
 #include "uart.h"
 #include "base_logic.h"
 #include "flash.h"
+//User variables
 extern uint8_t RXBuff[BLOCK_SIZE];
 extern uint8_t u8CountBlock;
 extern uint8_t u8CountBlockReieved;
@@ -21,5 +24,5 @@ extern uint8_t u8CountRequest;
 extern uint8_t Request;
 extern uint8_t u8SoftSize;
 extern uint8_t u8CountBlock;
-uint8_t u8CRC_Calculate(uint8_t cCRC, uint8_t nData);
+//uint8_t u8CRC_Calculate(uint8_t cCRC, uint8_t nData);
 #endif

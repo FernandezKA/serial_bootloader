@@ -38278,13 +38278,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.h@44@macro@BLOCK_SIZE",
+    "ID": "c:main.h@64@macro@BLOCK_SIZE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "BLOCK_SIZE",
     "location": {
       "column": "9",
-      "line": "3",
+      "line": "4",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "BLOCK_SIZE",
@@ -38292,13 +38292,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.h@72@macro@BOOT_PORT",
+    "ID": "c:main.h@92@macro@BOOT_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "BOOT_PORT",
     "location": {
       "column": "9",
-      "line": "4",
+      "line": "5",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "BOOT_PORT",
@@ -38306,13 +38306,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.h@103@macro@BOOT_PIN",
+    "ID": "c:main.h@123@macro@BOOT_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "BOOT_PIN",
     "location": {
       "column": "9",
-      "line": "5",
+      "line": "6",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "BOOT_PIN",
@@ -38320,13 +38320,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.h@133@macro@MAIN_ADDR",
+    "ID": "c:main.h@153@macro@MAIN_ADDR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MAIN_ADDR",
     "location": {
       "column": "9",
-      "line": "6",
+      "line": "7",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "MAIN_ADDR",
@@ -38340,7 +38340,7 @@
     "display": "RXBuff",
     "location": {
       "column": "16",
-      "line": "11",
+      "line": "14",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "RXBuff",
@@ -38354,7 +38354,7 @@
     "display": "u8CountBlock",
     "location": {
       "column": "16",
-      "line": "12",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountBlock",
@@ -38368,7 +38368,7 @@
     "display": "u8CountBlock",
     "location": {
       "column": "16",
-      "line": "12",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountBlock",
@@ -38382,7 +38382,7 @@
     "display": "u8CountBlockReieved",
     "location": {
       "column": "16",
-      "line": "13",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountBlockReieved",
@@ -38396,7 +38396,7 @@
     "display": "u8CountEnd",
     "location": {
       "column": "16",
-      "line": "14",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountEnd",
@@ -38410,21 +38410,7 @@
     "display": "u8BlockCRC",
     "location": {
       "column": "16",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
-    },
-    "name": "u8BlockCRC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8BlockCRC",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8BlockCRC",
-    "location": {
-      "column": "16",
-      "line": "15",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8BlockCRC",
@@ -38438,7 +38424,7 @@
     "display": "u8CRC",
     "location": {
       "column": "16",
-      "line": "16",
+      "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CRC",
@@ -38452,7 +38438,7 @@
     "display": "u8CRC",
     "location": {
       "column": "16",
-      "line": "16",
+      "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CRC",
@@ -38466,7 +38452,7 @@
     "display": "u8BootVersion",
     "location": {
       "column": "16",
-      "line": "17",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8BootVersion",
@@ -38480,7 +38466,7 @@
     "display": "u8BootVersion",
     "location": {
       "column": "16",
-      "line": "17",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8BootVersion",
@@ -38494,7 +38480,7 @@
     "display": "u8SoftVersion",
     "location": {
       "column": "16",
-      "line": "18",
+      "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8SoftVersion",
@@ -38508,7 +38494,7 @@
     "display": "u8SoftVersion",
     "location": {
       "column": "16",
-      "line": "18",
+      "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8SoftVersion",
@@ -38522,7 +38508,7 @@
     "display": "RecieveSoftware",
     "location": {
       "column": "13",
-      "line": "19",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "RecieveSoftware",
@@ -38536,7 +38522,7 @@
     "display": "RecieveSoftware",
     "location": {
       "column": "13",
-      "line": "19",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "RecieveSoftware",
@@ -38550,7 +38536,7 @@
     "display": "u8CountRequest",
     "location": {
       "column": "16",
-      "line": "20",
+      "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountRequest",
@@ -38564,7 +38550,7 @@
     "display": "u8CountRequest",
     "location": {
       "column": "16",
-      "line": "20",
+      "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountRequest",
@@ -38578,7 +38564,7 @@
     "display": "Request",
     "location": {
       "column": "16",
-      "line": "21",
+      "line": "24",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "Request",
@@ -38592,7 +38578,7 @@
     "display": "Request",
     "location": {
       "column": "16",
-      "line": "21",
+      "line": "24",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "Request",
@@ -38606,7 +38592,7 @@
     "display": "u8SoftSize",
     "location": {
       "column": "16",
-      "line": "22",
+      "line": "25",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8SoftSize",
@@ -38620,7 +38606,7 @@
     "display": "u8SoftSize",
     "location": {
       "column": "16",
-      "line": "22",
+      "line": "25",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8SoftSize",
@@ -38634,7 +38620,7 @@
     "display": "u8CountBlock",
     "location": {
       "column": "16",
-      "line": "23",
+      "line": "26",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountBlock",
@@ -38648,38 +38634,10 @@
     "display": "u8CountBlock",
     "location": {
       "column": "16",
-      "line": "23",
+      "line": "26",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
     },
     "name": "u8CountBlock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@u8CRC_Calculate",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t u8CRC_Calculate(uint8_t, uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
-    },
-    "name": "u8CRC_Calculate",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@u8CRC_Calculate",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t u8CRC_Calculate(uint8_t, uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\main.h"
-    },
-    "name": "u8CRC_Calculate",
     "origin": "user_include",
     "scope": null
   },
@@ -38726,20 +38684,6 @@
     "scope": null
   },
   {
-    "ID": "c:@u8BlockCRC",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8BlockCRC",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "u8BlockCRC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@u8CRC",
     "What": "Variable",
     "defdec": "Def",
@@ -38774,7 +38718,7 @@
     "display": "u8ACK",
     "location": {
       "column": "9",
-      "line": "10",
+      "line": "11",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8ACK",
@@ -38788,10 +38732,24 @@
     "display": "u8NACK",
     "location": {
       "column": "9",
-      "line": "11",
+      "line": "12",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8NACK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Request",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Request",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "Request",
     "origin": "project_file",
     "scope": null
   },
@@ -38802,7 +38760,7 @@
     "display": "u32ProgAddr",
     "location": {
       "column": "10",
-      "line": "12",
+      "line": "14",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u32ProgAddr",
@@ -38816,7 +38774,7 @@
     "display": "u8SoftVersion",
     "location": {
       "column": "9",
-      "line": "13",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8SoftVersion",
@@ -38830,7 +38788,7 @@
     "display": "u8BootVersion",
     "location": {
       "column": "9",
-      "line": "14",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8BootVersion",
@@ -38844,7 +38802,7 @@
     "display": "u8CountRequest",
     "location": {
       "column": "9",
-      "line": "15",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8CountRequest",
@@ -38858,7 +38816,7 @@
     "display": "RecieveSoftware",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "RecieveSoftware",
@@ -38872,24 +38830,10 @@
     "display": "u8SoftSize",
     "location": {
       "column": "9",
-      "line": "17",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8SoftSize",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Request",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Request",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "Request",
     "origin": "project_file",
     "scope": null
   },
@@ -38900,7 +38844,7 @@
     "display": "int SystemInit(void)",
     "location": {
       "column": "5",
-      "line": "20",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "SystemInit",
@@ -38922,27 +38866,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1297@F@main@u8CountRecieve",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8CountRecieve",
-    "location": {
-      "column": "17",
-      "line": "50",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "u8CountRecieve",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1334@F@main@Request",
+    "ID": "c:main.c@1351@F@main@Request",
     "What": "Variable",
     "defdec": "Def",
     "display": "Request",
     "location": {
-      "column": "17",
-      "line": "51",
+      "column": "15",
+      "line": "50",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "Request",
@@ -38950,13 +38880,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2059@F@main@u8SoftSize",
+    "ID": "c:main.c@2045@F@main@u8SoftSize",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8SoftSize",
     "location": {
-      "column": "24",
-      "line": "73",
+      "column": "21",
+      "line": "76",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8SoftSize",
@@ -38964,13 +38894,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2119@F@main@u8SoftRecieve",
+    "ID": "c:main.c@2102@F@main@u8SoftRecieve",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8SoftRecieve",
     "location": {
-      "column": "24",
-      "line": "74",
+      "column": "21",
+      "line": "77",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8SoftRecieve",
@@ -38978,27 +38908,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2165@F@main@u8dCRC",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8dCRC",
-    "location": {
-      "column": "24",
-      "line": "75",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
-    },
-    "name": "u8dCRC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@2204@F@main@u8CRC",
+    "ID": "c:main.c@2183@F@main@u8CRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CRC",
     "location": {
-      "column": "24",
-      "line": "76",
+      "column": "21",
+      "line": "79",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8CRC",
@@ -39006,13 +38922,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2412@F@main@u8RecieveData",
+    "ID": "c:main.c@2436@F@main@u8RecieveData",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8RecieveData",
     "location": {
-      "column": "28",
-      "line": "80",
+      "column": "27",
+      "line": "86",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8RecieveData",
@@ -39026,7 +38942,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "184",
+      "line": "125",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -39034,31 +38950,73 @@
     "scope": null
   },
   {
-    "ID": "c:@eBuffState",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "eBuffState",
+    "ID": "c:flash.h@27@macro@_flash_h_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_flash_h_",
     "location": {
-      "column": "17",
+      "column": "9",
       "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
     },
-    "name": "eBuffState",
-    "origin": "project_file",
+    "name": "_flash_h_",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@u8CRC_Calculate",
+    "ID": "c:@F@vFlashUnlock",
     "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t u8CRC_Calculate(uint8_t, uint8_t)",
+    "defdec": "Dec",
+    "display": "void vFlashUnlock(void)",
     "location": {
-      "column": "9",
-      "line": "3",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+      "column": "6",
+      "line": "5",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
     },
-    "name": "u8CRC_Calculate",
-    "origin": "project_file",
+    "name": "vFlashUnlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vFlashUnlock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void vFlashUnlock(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+    },
+    "name": "vFlashUnlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vFlashWritePage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+    },
+    "name": "vFlashWritePage",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vFlashWritePage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
+    },
+    "name": "vFlashWritePage",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -39344,76 +39302,6 @@
     "scope": null
   },
   {
-    "ID": "c:flash.h@27@macro@_flash_h_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_flash_h_",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "_flash_h_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashUnlock",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashUnlock(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "vFlashUnlock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashUnlock",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashUnlock(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "vFlashUnlock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashWritePage",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "vFlashWritePage",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashWritePage",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\flash.h"
-    },
-    "name": "vFlashWritePage",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@vFlashUnlock",
     "What": "Function",
     "defdec": "Def",
@@ -39434,7 +39322,7 @@
     "display": "void vFlashWritePage(uint32_t, uint8_t *)",
     "location": {
       "column": "6",
-      "line": "7",
+      "line": "8",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\flash.c"
     },
     "name": "vFlashWritePage",
@@ -39442,13 +39330,13 @@
     "scope": null
   },
   {
-    "ID": "c:flash.c@196@F@vFlashWritePage@i",
+    "ID": "c:flash.c@197@F@vFlashWritePage@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
-      "column": "18",
-      "line": "9",
+      "column": "17",
+      "line": "11",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\flash.c"
     },
     "name": "i",
@@ -39482,7 +39370,7 @@
         "display": "few",
         "location": {
           "column": "3",
-          "line": "5",
+          "line": "6",
           "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
         },
         "name": "few",
@@ -39496,7 +39384,7 @@
         "display": "complete",
         "location": {
           "column": "3",
-          "line": "6",
+          "line": "7",
           "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
         },
         "name": "complete",
@@ -39520,11 +39408,39 @@
     "display": "eBuffState",
     "location": {
       "column": "24",
-      "line": "8",
+      "line": "9",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\inc\\base_logic.h"
     },
     "name": "eBuffState",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@eBuffState",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "eBuffState",
+    "location": {
+      "column": "17",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+    },
+    "name": "eBuffState",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@u8CRC_Calculate",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t u8CRC_Calculate(uint8_t, uint8_t)",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\base_logic.c"
+    },
+    "name": "u8CRC_Calculate",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -39562,7 +39478,7 @@
     "display": "void vUART_Recieve(uint8_t)",
     "location": {
       "column": "6",
-      "line": "19",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Recieve",
@@ -39570,13 +39486,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@621@F@vUART_Recieve@u8CurrData",
+    "ID": "c:uart.c@628@F@vUART_Recieve@u8CurrData",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CurrData",
     "location": {
       "column": "11",
-      "line": "21",
+      "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "u8CurrData",
@@ -39590,7 +39506,7 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "38",
+      "line": "41",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Transmit",
@@ -39604,24 +39520,10 @@
     "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "9",
-      "line": "47",
+      "line": "54",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
     },
     "name": "u8UART_RecieveNoIRQ",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_RX_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UART1_RX_IRQHandler(void)",
-    "location": {
-      "column": "1",
-      "line": "56",
-      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\uart.c"
-    },
-    "name": "UART1_RX_IRQHandler",
     "origin": "project_file",
     "scope": null
   }

@@ -3,5 +3,5 @@
 #include "main.h"
 #include "stm8s_flash.h"
 void vFlashUnlock(void);
-void vFlashWritePage(uint32_t addr, uint8_t* pData);
+void vFlashWritePage(uint32_t addr, uint8_t *pData);
 #endif
