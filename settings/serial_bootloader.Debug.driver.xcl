@@ -6,6 +6,8 @@
 
 "STM8S103F3P" 
 
+"--erase_memory" 
+
 
 
 

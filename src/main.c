@@ -11,10 +11,9 @@ uint8_t u8rCRC = 0xFF;
 uint8_t u8ACK = 0x55U;
 uint8_t u8NACK = 0x65U;
 uint8_t Request = 0x00;
-uint32_t u32ProgAddr = 0x8040;
 //Info variables
 uint8_t u8SoftVersion = 0x01;
-uint8_t u8BootVersion = 0x01;
+uint8_t u8BootVersion = 0x02;
 uint8_t u8CountRequest = 0x00;
 bool RecieveSoftware = FALSE;
 uint8_t u8SoftSize = 0x00;
@@ -41,12 +40,10 @@ void main(void)
       asm("LD  A,  $FF");
       asm("LD  XL, A  ");
       asm("LDW SP, X  ");
-      asm("JP $8040");
+      asm("JP $8000");
     }
     else
     { //with bootloader
-      //uint8_t SoftSize = 0;
-      //uint8_t u8CountRecieve = 0;
       uint8_t Request = 0x00;
       for (;;)
       {
@@ -59,60 +56,28 @@ void main(void)
           }
           switch (Request)
           {
-          case 0x01:
-            vUART_Transmit(u8ACK);
-            Request = 0x00;
-            break;
-          case 0x02:
+          case 0x01://Soft and boot version
             vUART_Transmit(u8BootVersion);
+            vUART_Transmit(u8SoftVersion);
             Request = 0x00;
             break;
-          case 0x03:
-            vUART_Transmit(u8BootVersion);
+/******************************************************************************/
+          case 0x02://Recieve soft request
             Request = 0x00;
-            break;
-          case 0x04:
-            vUART_Transmit(u8ACK);
-            uint8_t u8SoftSize = u8UART_RecieveNoIRQ();
-            uint8_t u8SoftRecieve = 0x00;
-            //uint8_t u8dCRC = 0xFF;
-            uint8_t u8CRC = 0xFF;
-            while (u8SoftRecieve < u8SoftSize)
-            {
-              while (eBuffState != complete)
-              {
-                if ((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE)
-                {
-                  uint8_t u8RecieveData = UART1->DR;
-                  vUART_Recieve(u8RecieveData);
-                  u8rCRC ^= u8RecieveData;
+            uint8_t u8CountRecieve = 0x00;
+            while(u8CountRecieve < 20){
+              uint8_t u8RecieveByte = 0x00;
+              while(u8RecieveByte < 64){
+                if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
+                  RXBuff[u8RecieveByte++] = UART1->DR;
                 }
               }
-              vUART_Transmit(u8NACK);
-              u8CRC = u8UART_RecieveNoIRQ();
-              if (u8rCRC == u8CRC)
-              {
-                //++u8SoftRecieve;?
-                FLASH_Unlock(FLASH_MEMTYPE_PROG);
-                FLASH_ProgramBlock(u8SoftRecieve++, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
-                FLASH_Lock(FLASH_MEMTYPE_PROG);
-                u8rCRC = 0xFF;
-                u8CRC = 0xFF;
-                eBuffState = few;
-                vUART_Transmit(u8ACK);
-              }
-              else
-              {
-                vUART_Transmit(u8NACK);
-              }
+              FLASH_Unlock(FLASH_MEMTYPE_PROG);
+              FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+              FLASH_Lock(FLASH_MEMTYPE_PROG);
+              ++u8CountRecieve;
+              vUART_Transmit(u8ACK);
             }
-            //u8SoftRecieve = 0x00;
-            //u8SoftSize = 0x00;
-            //Request = 0x00;
-            asm("jp 0x8000");
-            break;
-          default:
-            Request = 0x00;
             break;
           }
         }
