@@ -67,16 +67,28 @@ void main(void)
             uint8_t u8CountRecieve = 0x00;
             while(u8CountRecieve < 20){
               uint8_t u8RecieveByte = 0x00;
+              uint8_t u8rCRC = 0xFF;
+              uint8_t u8dCRC = 0xFF;
               while(u8RecieveByte < 64){
                 if((UART1->SR & UART1_SR_RXNE) == UART1_SR_RXNE){
                   RXBuff[u8RecieveByte++] = UART1->DR;
                 }
               }
-              FLASH_Unlock(FLASH_MEMTYPE_PROG);
-              FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
-              FLASH_Lock(FLASH_MEMTYPE_PROG);
-              ++u8CountRecieve;
-              vUART_Transmit(u8ACK);
+              for(uint8_t i = 0; i < 64; ++i){
+                u8dCRC^=RXBuff[i];
+              }
+              u8rCRC = u8UART_RecieveNoIRQ();
+              if(u8rCRC == u8dCRC){
+                FLASH_Unlock(FLASH_MEMTYPE_PROG);
+                FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                FLASH_Lock(FLASH_MEMTYPE_PROG);
+                ++u8CountRecieve;
+                vUART_Transmit(u8ACK);
+              }
+              else{
+                vUART_Transmit(u8NACK);
+              }
+
             }
             break;
           }
