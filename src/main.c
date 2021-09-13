@@ -20,11 +20,16 @@ uint8_t u8SoftSize = 0x00;
 /*********************************/
 int SystemInit(void)
 {
-  CLK->CKDIVR = 2;
+  CLK->CKDIVR = 0;
   vUART_Config();
   //TODO Edit gpio initialization (without SPL)
-  GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_SLOW);
-  GPIO_Init(BOOT_PORT, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
+  //OUTPUT PUSH PULL
+  GPIOB->DDR|=(1<<5);
+  GPIOB->CR1|=(1<<5);
+  //INPUT PULL UP
+  GPIOC->CR1|=(1<<7);
+  //GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_SLOW);
+  //GPIO_Init(BOOT_PORT, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
   return 0;
 }
 
@@ -40,7 +45,7 @@ void main(void)
       asm("LD  A,  $FF");
       asm("LD  XL, A  ");
       asm("LDW SP, X  ");
-      asm("JP $8000");
+      asm("JP $9000");
     }
     else
     { //with bootloader
@@ -80,7 +85,7 @@ void main(void)
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
-                FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                FLASH_ProgramBlock(u8CountRecieve + 64, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
                 ++u8CountRecieve;
                 vUART_Transmit(u8ACK);

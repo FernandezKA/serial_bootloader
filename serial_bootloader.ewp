@@ -1689,6 +1689,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\inc\stm8s_gpio.h</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                    </excluded>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\inc\stm8s_i2c.h</name>
@@ -1728,12 +1731,21 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\inc\stm8s_uart1.h</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                    </excluded>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\inc\stm8s_uart2.h</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                    </excluded>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\inc\stm8s_uart3.h</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                    </excluded>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\inc\stm8s_uart4.h</name>
