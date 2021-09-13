@@ -812,7 +812,7 @@
                     <item>u8CountRecieve</item>
                     <item>u8SoftSize</item>
                     <item>u8SoftRecieve</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

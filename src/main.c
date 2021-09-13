@@ -85,7 +85,7 @@ void main(void)
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
-                FLASH_ProgramBlock(u8CountRecieve + 64, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
+                FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
                 ++u8CountRecieve;
                 vUART_Transmit(u8ACK);
