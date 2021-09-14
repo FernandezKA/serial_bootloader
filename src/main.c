@@ -17,6 +17,7 @@ uint8_t u8BootVersion = 0x02;
 uint8_t u8CountRequest = 0x00;
 bool RecieveSoftware = FALSE;
 uint8_t u8SoftSize = 0x00;
+uint16_t u16FreeSize = 0x1A00; 
 /*********************************/
 int SystemInit(void)
 {
@@ -64,6 +65,8 @@ void main(void)
           case 0x01://Soft and boot version
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
+            vUART_Transmit((u16FreeSize >> 8)&0xFF);//MSB
+            vUART_Transmit(u16FreeSize & 0xFF);//LSB
             Request = 0x00;
             break;
 /******************************************************************************/

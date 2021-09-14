@@ -38926,13 +38926,27 @@
     "scope": null
   },
   {
+    "ID": "c:@u16FreeSize",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u16FreeSize",
+    "location": {
+      "column": "10",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
+    },
+    "name": "u16FreeSize",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@SystemInit",
     "What": "Function",
     "defdec": "Def",
     "display": "int SystemInit(void)",
     "location": {
       "column": "5",
-      "line": "21",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "SystemInit",
@@ -38946,7 +38960,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "36",
+      "line": "37",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "main",
@@ -38954,13 +38968,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1365@F@main@Request",
+    "ID": "c:main.c@1398@F@main@Request",
     "What": "Variable",
     "defdec": "Def",
     "display": "Request",
     "location": {
       "column": "15",
-      "line": "52",
+      "line": "53",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "Request",
@@ -38968,13 +38982,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2001@F@main@u8CountRecieve",
+    "ID": "c:main.c@2147@F@main@u8CountRecieve",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CountRecieve",
     "location": {
       "column": "21",
-      "line": "72",
+      "line": "75",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8CountRecieve",
@@ -38982,13 +38996,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2088@F@main@u8RecieveByte",
+    "ID": "c:main.c@2234@F@main@u8RecieveByte",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8RecieveByte",
     "location": {
       "column": "23",
-      "line": "74",
+      "line": "77",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8RecieveByte",
@@ -38996,13 +39010,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2133@F@main@u8rCRC",
+    "ID": "c:main.c@2279@F@main@u8rCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8rCRC",
     "location": {
       "column": "23",
-      "line": "75",
+      "line": "78",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8rCRC",
@@ -39010,13 +39024,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2171@F@main@u8dCRC",
+    "ID": "c:main.c@2317@F@main@u8dCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8dCRC",
     "location": {
       "column": "23",
-      "line": "76",
+      "line": "79",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "u8dCRC",
@@ -39024,13 +39038,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2414@F@main@i",
+    "ID": "c:main.c@2560@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "27",
-      "line": "82",
+      "line": "85",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -39044,7 +39058,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "107",
+      "line": "110",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
