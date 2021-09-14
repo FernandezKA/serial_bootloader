@@ -45,7 +45,7 @@ void main(void)
       asm("LD  A,  $FF");
       asm("LD  XL, A  ");
       asm("LDW SP, X  ");
-      asm("JP $9000");
+      asm("JP $8000");
     }
     else
     { //with bootloader
@@ -70,7 +70,7 @@ void main(void)
           case 0x02://Recieve soft request
             Request = 0x00;
             uint8_t u8CountRecieve = 0x00;
-            while(u8CountRecieve < 20){
+            while(u8CountRecieve < 64){
               uint8_t u8RecieveByte = 0x00;
               uint8_t u8rCRC = 0xFF;
               uint8_t u8dCRC = 0xFF;
