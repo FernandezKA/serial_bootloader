@@ -2,9 +2,8 @@
 #define _main_h_
 //User definitions
 #define BLOCK_SIZE      64
-#define BOOT_PORT       GPIOC
-#define BOOT_PIN        0x80
-#define MAIN_ADDR       0x8040
+#define BOOT_PORT       GPIOB
+#define BOOT_PIN        0x08
 //User include
 #include "stm8s_conf.h"
 #include "uart.h"

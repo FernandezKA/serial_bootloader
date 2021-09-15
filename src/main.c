@@ -18,6 +18,7 @@ uint8_t u8CountRequest = 0x00;
 bool RecieveSoftware = FALSE;
 uint8_t u8SoftSize = 0x00;
 uint16_t u16FreeSize = 0x1A00; 
+uint8_t u8UID[12] = {0};
 /*********************************/
 int SystemInit(void)
 {
@@ -28,9 +29,12 @@ int SystemInit(void)
   GPIOB->DDR|=(1<<5);
   GPIOB->CR1|=(1<<5);
   //INPUT PULL UP
-  GPIOC->CR1|=(1<<7);
+  GPIOB->CR1|=(1<<4);
   //GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_SLOW);
   //GPIO_Init(BOOT_PORT, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
+  for(uint8_t i = 0; i < 12; ++i){
+    u8UID[i] = FLASH_ReadByte(0x4865 + i);
+  }
   return 0;
 }
 
@@ -67,6 +71,9 @@ void main(void)
             vUART_Transmit(u8SoftVersion);
             vUART_Transmit((u16FreeSize >> 8)&0xFF);//MSB
             vUART_Transmit(u16FreeSize & 0xFF);//LSB
+            for(int i = 0; i < 12; ++i){
+              vUART_Transmit(u8UID[i]);
+            }
             Request = 0x00;
             break;
 /******************************************************************************/
