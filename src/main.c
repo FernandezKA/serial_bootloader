@@ -66,7 +66,7 @@ void main(void)
           }
           switch (Request)
           {
-          case 0x01://Soft and boot version
+          case 0x31://Soft and boot version
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
             vUART_Transmit((u16FreeSize >> 8)&0xFF);//MSB
@@ -77,7 +77,7 @@ void main(void)
             Request = 0x00;
             break;
 /******************************************************************************/
-          case 0x02://Recieve soft request
+          case 0x32://Recieve soft request
             Request = 0x00;
             uint8_t u8CountRecieve = 0x00;
             while(u8CountRecieve < 64){
