@@ -24,14 +24,11 @@ int SystemInit(void)
 {
   CLK->CKDIVR = 0;
   vUART_Config();
-  //TODO Edit gpio initialization (without SPL)
   //OUTPUT PUSH PULL
   GPIOB->DDR|=(1<<5);
   GPIOB->CR1|=(1<<5);
   //INPUT PULL UP
   GPIOB->CR1|=(1<<4);
-  //GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_SLOW);
-  //GPIO_Init(BOOT_PORT, GPIO_PIN_7, GPIO_MODE_IN_PU_NO_IT);
   for(uint8_t i = 0; i < 12; ++i){
     u8UID[i] = FLASH_ReadByte(0x4865 + i);
   }
@@ -54,6 +51,9 @@ void main(void)
     }
     else
     { //with bootloader
+      vUART_Transmit(0x55);
+      vUART_Transmit(0x55);
+      vUART_Transmit(0xAA);
       uint8_t Request = 0x00;
       for (;;)
       {
