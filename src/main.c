@@ -17,7 +17,7 @@ uint8_t u8BootVersion = 0x02;
 uint8_t u8CountRequest = 0x00;
 bool RecieveSoftware = FALSE;
 uint8_t u8SoftSize = 0x00;
-uint16_t u16FreeSize = 0x1A00; 
+uint16_t u8FreeSize = 0x40; 
 uint8_t u8UID[12] = {0};
 /*********************************/
 int SystemInit(void)
@@ -52,8 +52,8 @@ void main(void)
     else
     { //with bootloader
       vUART_Transmit(0x55);
-      vUART_Transmit(0x55);
       vUART_Transmit(0xAA);
+      vUART_Transmit(0x55);
       uint8_t Request = 0x00;
       for (;;)
       {
@@ -69,8 +69,7 @@ void main(void)
           case 0x31://Soft and boot version
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
-            vUART_Transmit((u16FreeSize >> 8)&0xFF);//MSB
-            vUART_Transmit(u16FreeSize & 0xFF);//LSB
+            vUART_Transmit(u8FreeSize);
             for(int i = 0; i < 12; ++i){
               vUART_Transmit(u8UID[i]);
             }
@@ -78,6 +77,7 @@ void main(void)
             break;
 /******************************************************************************/
           case 0x32://Recieve soft request
+            vUART_Transmit(u8ACK);
             Request = 0x00;
             uint8_t u8CountRecieve = 0x00;
             while(u8CountRecieve < 64){

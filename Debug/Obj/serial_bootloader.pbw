@@ -38460,16 +38460,16 @@
     "scope": null
   },
   {
-    "ID": "c:@u16FreeSize",
+    "ID": "c:@u8FreeSize",
     "What": "Variable",
     "defdec": "Def",
-    "display": "u16FreeSize",
+    "display": "u8FreeSize",
     "location": {
       "column": "10",
       "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
-    "name": "u16FreeSize",
+    "name": "u8FreeSize",
     "origin": "project_file",
     "scope": null
   },
@@ -38502,7 +38502,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@805@F@SystemInit@i",
+    "ID": "c:main.c@802@F@SystemInit@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -38530,7 +38530,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1423@F@main@Request",
+    "ID": "c:main.c@1420@F@main@Request",
     "What": "Variable",
     "defdec": "Def",
     "display": "Request",
@@ -38544,13 +38544,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1972@F@main@i",
+    "ID": "c:main.c@1897@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "21",
-      "line": "74",
+      "line": "73",
       "path": "C:\\dev\\MCU\\STM8\\Serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -38558,7 +38558,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2270@F@main@u8CountRecieve",
+    "ID": "c:main.c@2231@F@main@u8CountRecieve",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CountRecieve",
@@ -38572,7 +38572,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2357@F@main@u8RecieveByte",
+    "ID": "c:main.c@2318@F@main@u8RecieveByte",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8RecieveByte",
@@ -38586,7 +38586,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2402@F@main@u8rCRC",
+    "ID": "c:main.c@2363@F@main@u8rCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8rCRC",
@@ -38600,7 +38600,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2440@F@main@u8dCRC",
+    "ID": "c:main.c@2401@F@main@u8dCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8dCRC",
@@ -38614,7 +38614,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2683@F@main@i",
+    "ID": "c:main.c@2644@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
