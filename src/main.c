@@ -41,7 +41,7 @@ void main(void)
   while (1)
   {
     //GPIOB->ODR^=(1<<5);
-    if ((BOOT_PORT->IDR & BOOT_PIN) == BOOT_PIN) //Get boot for hight logic state
+    if ((BOOT_PORT->IDR & BOOT_PIN) != BOOT_PIN) //Get boot for hight logic state
     {                                          
       asm("LDW X,  SP ");
       asm("LD  A,  $FF");
@@ -103,7 +103,6 @@ void main(void)
               else{
                 vUART_Transmit(u8NACK);
               }
-
             }
             break;
           }

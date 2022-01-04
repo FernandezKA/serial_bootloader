@@ -38634,7 +38634,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "117",
+      "line": "116",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
