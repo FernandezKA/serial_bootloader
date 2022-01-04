@@ -1,36 +1,37 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     22/Sep/2021  22:55:39
+# IAR ELF Linker V3.11.1.207 for STM8                     04/Jan/2022  20:49:51
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Exe\SPL_STM8S_template.out
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Exe\SPL_STM8S_template.out
 #    Map file     =  
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\List\SPL_STM8S_template.map
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\List\SPL_STM8S_template.map
 #    Command line =  
-#        -f C:\Users\ferna\AppData\Local\Temp\EW6639.tmp
-#        (C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\base_logic.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\flash.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\main.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_clk.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_flash.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_gpio.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_rst.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim1.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim2.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim4.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_uart1.o
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\uart.o --redirect
+#        -f C:\Users\ferna\AppData\Local\Temp\EWF737.tmp
+#        (C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\base_logic.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\flash.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\main.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_clk.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_flash.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_gpio.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_rst.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim1.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim2.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim4.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_uart1.o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\uart.o --redirect
 #        _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall --no_out_extension
-#        -o C:\dev\MCU\STM8\Serial_bootloader\Debug\Exe\SPL_STM8S_template.out
+#        -o
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\Exe\SPL_STM8S_template.out
 #        --map
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\List\SPL_STM8S_template.map
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\List\SPL_STM8S_template.map
 #        --log
 #        libraries,initialization,modules,redirects,sections,unused_fragments
 #        --log_file
-#        C:\dev\MCU\STM8\Serial_bootloader\Debug\List\SPL_STM8S_template.log
-#        --config C:\dev\MCU\STM8\Serial_bootloader\lnkstm8s103f3.icf
+#        C:\dev\STM8\bootloader\serial_bootloader\Debug\List\SPL_STM8S_template.log
+#        --config C:\dev\STM8\bootloader\serial_bootloader\lnkstm8s103f3.icf
 #        --config_def _CSTACK_SIZE=0x100 --config_def _HEAP_SIZE=0x100 --entry
 #        __iar_program_start --debug_lib)
 #
@@ -224,7 +225,7 @@ Copy (__iar_copy_init2)
 
     Module                 ro code  rw code  ro data  rw data
     ------                 -------  -------  -------  -------
-C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj: [1]
+C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj: [1]
     main.o                     312                 6       82
     stm8s_flash.o              184      298      358
     stm8s_it.o                  42
@@ -395,7 +396,7 @@ vUART_Config            0x009f43   0x15  Code  Gb  uart.o [1]
 vUART_Transmit          0x009f93    0xc  Code  Gb  uart.o [1]
 
 
-[1] = C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj
+[1] = C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj
 [2] = command line
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a

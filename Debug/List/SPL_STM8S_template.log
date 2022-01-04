@@ -4,12 +4,12 @@ Global:
   ------   -------------
   _Printf  _PrintfSmall
   _Scanf   _ScanfSmall
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\base_logic.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\base_logic.o.
               reference :  ?b0
               reference :  ?b1
               definition:  eBuffState
               definition:  u8CRC_Calculate
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\flash.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\flash.o.
               reference :  ?add32_l0_l0_dl
               reference :  ?epilogue_l2_l3
               reference :  ?inc32_l2_l2
@@ -25,7 +25,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\flash.o.
               reference :  FLASH_ProgramByte
               definition:  vFlashUnlock
               definition:  vFlashWritePage
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\main.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\main.o.
               reference :  ?b0
               reference :  ?b10
               reference :  ?b11
@@ -60,7 +60,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\main.o.
               definition:  u8SoftVersion
               definition:  u8UID
               definition:  u8rCRC
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_clk.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_clk.o.
               reference :  ?b0
               reference :  ?b1
               reference :  ?b10
@@ -122,7 +122,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_clk.o.
               definition:  __iar_cc.._fiiWX93Bf_
               definition:  __iar_cc..j$IY8VfxRz9
               definition:  __iar_cc..2RGsYq26v98
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_flash.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_flash.o.
               reference :  ?add32_l0_l0_dl
               reference :  ?add32_l0_l0_l1
               reference :  ?b0
@@ -183,7 +183,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_flash.o.
               definition:  FLASH_SetProgrammingTime
               definition:  FLASH_Unlock
               definition:  FLASH_WaitForLastOperation
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_gpio.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_gpio.o.
               reference :  ?b0
               reference :  ?b10
               reference :  ?b11
@@ -205,7 +205,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_gpio.o.
               definition:  GPIO_WriteReverse
               definition:  __iar_cc..KBm8amlLU21
               definition:  __iar_cc..B74vgNkTsa8
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o.
               definition:  ADC1_IRQHandler
               definition:  AWU_IRQHandler
               definition:  CLK_IRQHandler
@@ -244,14 +244,14 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o.
               definition:  _interrupt_7
               definition:  _interrupt_8
               definition:  _interrupt_9
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_rst.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_rst.o.
               reference :  ?b8
               reference :  ?w0
               reference :  ?w1
               reference :  assert_failed
               definition:  RST_ClearFlag
               definition:  RST_GetFlagStatus
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim1.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim1.o.
               reference :  ?b0
               reference :  ?b1
               reference :  ?b10
@@ -354,7 +354,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim1.o.
               definition:  TIM1_UpdateDisableConfig
               definition:  TIM1_UpdateRequestConfig
               definition:  __iar_cc..yw3uIH2jdC5
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim2.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim2.o.
               reference :  ?and16_x_x_dw
               reference :  ?b0
               reference :  ?b1
@@ -424,7 +424,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim2.o.
               definition:  TIM2_UpdateDisableConfig
               definition:  TIM2_UpdateRequestConfig
               definition:  __iar_cc..IHMQv3rm0R$
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim4.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim4.o.
               reference :  ?b0
               reference :  ?b10
               reference :  ?b11
@@ -455,7 +455,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_tim4.o.
               definition:  TIM4_TimeBaseInit
               definition:  TIM4_UpdateDisableConfig
               definition:  TIM4_UpdateRequestConfig
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_uart1.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_uart1.o.
               reference :  ?b0
               reference :  ?b1
               reference :  ?b10
@@ -525,7 +525,7 @@ Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_uart1.o.
               definition:  UART1_SmartCardNACKCmd
               definition:  UART1_WakeUpConfig
               definition:  __iar_cc..P8cudyG80P1
-Loading object C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\uart.o.
+Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\uart.o.
               reference :  ?b0
               reference :  ?b1
               reference :  RXBuff
@@ -1029,43 +1029,43 @@ Selecting member init_small.o(dlstm8smn.a) to define __iar_zero_init2.
               definition:  __iar_copy_init2
               definition:  __iar_zero_init2
 Resolving duplicate symbol definitions
-  Picking _interrupt_1 [s8 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_1 [s8 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_1 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_14 [s19 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_14 [s19 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_14 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_15 [s20 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_15 [s20 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_15 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_12 [s17 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_12 [s17 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_12 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_13 [s18 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_13 [s18 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_13 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_2 [s9 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_2 [s9 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_2 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_16 [s21 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_16 [s21 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_16 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_19 [s22 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_19 [s22 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_19 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_21 [s23 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_21 [s23 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_21 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_24 [s24 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_24 [s24 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_24 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_25 [s25 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_25 [s25 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_25 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_26 [s26 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_26 [s26 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_26 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_3 [s10 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_3 [s10 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_3 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_4 [s11 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_4 [s11 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_4 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_5 [s12 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_5 [s12 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_5 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_6 [s13 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_6 [s13 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_6 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_7 [s14 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_7 [s14 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_7 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_8 [s15 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_8 [s15 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_8 [s6 interrupt.o(dlstm8smn.a)]
-  Picking _interrupt_9 [s16 C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\stm8s_it.o]
+  Picking _interrupt_9 [s16 C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o]
     Suppressing _interrupt_9 [s6 interrupt.o(dlstm8smn.a)]
 *** Marking from roots ***
 Marking symbol __iar_program_start              Glb (19 cstartup.o) [program entry]

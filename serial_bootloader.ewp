@@ -610,7 +610,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>C:\dev\MCU\STM8\Serial_bootloader\lnkstm8s103f3.icf</state>
+                    <state>C:\dev\STM8\bootloader\serial_bootloader\lnkstm8s103f3.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
