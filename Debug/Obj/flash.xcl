@@ -1,26 +1,26 @@
-"C:\dev\MCU\STM8\Serial_bootloader\src\flash.c"
+"C:\dev\STM8\bootloader\serial_bootloader\src\flash.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\dev\MCU\STM8\Serial_bootloader\Debug\Obj\flash.pbi.dep
+C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\flash.pbi.dep
 -o
 flash.pbi
 -I
-C:\dev\MCU\STM8\Serial_bootloader\src
+C:\dev\STM8\bootloader\serial_bootloader\src
 -I
-C:\dev\MCU\STM8\Serial_bootloader\inc
+C:\dev\STM8\bootloader\serial_bootloader\inc
 -I
-C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc
+C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc\c
 -I
-C:\dev\MCU\STM8\Serial_bootloader\inc
+C:\dev\STM8\bootloader\serial_bootloader\inc
 -I
-C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\inc
+C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

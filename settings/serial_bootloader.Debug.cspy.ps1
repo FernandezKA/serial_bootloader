@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\dev\MCU\STM8\Serial_bootloader\settings\serial_bootloader.Debug.general.xcl" --backend -f "C:\dev\MCU\STM8\Serial_bootloader\settings\serial_bootloader.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\dev\STM8\bootloader\serial_bootloader\settings\serial_bootloader.Debug.general.xcl" --backend -f "C:\dev\STM8\bootloader\serial_bootloader\settings\serial_bootloader.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\dev\MCU\STM8\Serial_bootloader\settings\serial_bootloader.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\dev\MCU\STM8\Serial_bootloader\settings\serial_bootloader.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\dev\STM8\bootloader\serial_bootloader\settings\serial_bootloader.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\dev\STM8\bootloader\serial_bootloader\settings\serial_bootloader.Debug.driver.xcl" 
 }
