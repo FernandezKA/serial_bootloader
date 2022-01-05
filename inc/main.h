@@ -3,7 +3,7 @@
 //User definitions
 #define BLOCK_SIZE      64
 #define BOOT_PORT       GPIOB
-#define BOOT_PIN        0x08
+#define BOOT_PIN        0x10
 //User include
 #include "stm8s_conf.h"
 #include "uart.h"

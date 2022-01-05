@@ -13,7 +13,8 @@ uint8_t u8NACK = 0x65U;
 uint8_t Request = 0x00;
 //Info variables
 uint8_t u8SoftVersion = 0x01;
-uint8_t u8BootVersion = 0x02;
+uint8_t u8BootVersion = 0x01;
+uint8_t u8HardVersion = 0x02;
 uint8_t u8CountRequest = 0x00;
 bool RecieveSoftware = FALSE;
 uint8_t u8SoftSize = 0x00;
@@ -67,8 +68,15 @@ void main(void)
           switch (Request)
           {
           case 0x31://Soft and boot version
+            //Flash_Read(u16SoftVersion);
+            //uint8_t* pBV = (uint8_t*) 0x00009FF0;
+            //*pBV = (uint8_t) 23;
+            //u8BootVersion = *pBV;//FLASH_ReadByte(0x009FA0);
+            //u8SoftVersion = FLASH_ReadByte(0x009FA0 + sizeof(uint8_t));
+            //u8HardVersion = FLASH_ReadByte(0x9F10);
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
+            vUART_Transmit(u8HardVersion);
             vUART_Transmit(u8FreeSize);
             for(int i = 0; i < 12; ++i){
               vUART_Transmit(u8UID[i]);
