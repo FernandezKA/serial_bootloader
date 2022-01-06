@@ -4,6 +4,7 @@
 #define BLOCK_SIZE      64
 #define BOOT_PORT       GPIOB
 #define BOOT_PIN        0x10
+#define InfoBlock 0x00009F80
 //User include
 #include "stm8s_conf.h"
 #include "uart.h"
@@ -18,6 +19,7 @@ extern uint8_t u8BlockCRC;
 extern uint8_t u8CRC;
 extern uint8_t u8BootVersion;
 extern uint8_t u8SoftVersion;
+extern uint8_t u8HardVersion;
 extern bool RecieveSoftware;
 extern uint8_t u8CountRequest;
 extern uint8_t Request;

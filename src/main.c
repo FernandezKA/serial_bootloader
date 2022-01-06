@@ -20,6 +20,7 @@ bool RecieveSoftware = FALSE;
 uint8_t u8SoftSize = 0x00;
 uint16_t u8FreeSize = 0x40; 
 uint8_t u8UID[12] = {0};
+uint8_t u8PageInfo[64];
 /*********************************/
 int SystemInit(void)
 {
@@ -68,12 +69,10 @@ void main(void)
           switch (Request)
           {
           case 0x31://Soft and boot version
-            //Flash_Read(u16SoftVersion);
-            //uint8_t* pBV = (uint8_t*) 0x00009FF0;
-            //*pBV = (uint8_t) 23;
-            //u8BootVersion = *pBV;//FLASH_ReadByte(0x009FA0);
-            //u8SoftVersion = FLASH_ReadByte(0x009FA0 + sizeof(uint8_t));
-            //u8HardVersion = FLASH_ReadByte(0x9F10);
+            //uint8_t* pValue =(uint8_t*) 0x9FC0;
+            //u8BootVersion = *(pValue);
+            //u8SoftVersion = *(pValue +  sizeof(uint8_t));
+            //u8HardVersion = *(pValue +  2 * sizeof(uint8_t));
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
             vUART_Transmit(u8HardVersion);
@@ -88,7 +87,7 @@ void main(void)
             vUART_Transmit(u8ACK);
             Request = 0x00;
             uint8_t u8CountRecieve = 0x00;
-            while(u8CountRecieve < 64){
+            while(u8CountRecieve < 63){
               uint8_t u8RecieveByte = 0x00;
               uint8_t u8rCRC = 0xFF;
               uint8_t u8dCRC = 0xFF;

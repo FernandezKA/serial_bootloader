@@ -1,14 +1,12 @@
-main.pbi: C:\dev\STM8\bootloader\serial_bootloader\src\main.c \
+main.pbi: \
+  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s_flash.h \
   C:\dev\STM8\bootloader\serial_bootloader\inc\main.h \
-  C:\dev\STM8\bootloader\serial_bootloader\inc/stm8s_conf.h \
-  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s.h \
-  C:\dev\STM8\bootloader\serial_bootloader\inc\stm8s_conf.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
-  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s_clk.h \
-  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc/stm8s.h \
+  C:\dev\STM8\bootloader\serial_bootloader\inc\flash.h \
+  C:\dev\STM8\bootloader\serial_bootloader\inc\base_logic.h \
+  C:\dev\STM8\bootloader\serial_bootloader\inc\uart.h \
   C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s_gpio.h \
-  C:\dev\STM8\bootloader\serial_bootloader\inc/uart.h \
-  C:\dev\STM8\bootloader\serial_bootloader\inc/main.h \
-  C:\dev\STM8\bootloader\serial_bootloader\inc/base_logic.h \
-  C:\dev\STM8\bootloader\serial_bootloader\inc/flash.h \
-  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s_flash.h
+  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s_clk.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
+  C:\dev\STM8\bootloader\serial_bootloader\inc\stm8s_conf.h \
+  C:\dev\STM8\bootloader\serial_bootloader\lib\SPL\inc\stm8s.h \
+  C:\dev\STM8\bootloader\serial_bootloader\src\main.c
