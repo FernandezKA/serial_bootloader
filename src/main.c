@@ -1,7 +1,7 @@
 #include "main.h"
 /*********************************/
 #define OLD_VERSION
-
+/*********************************/
 //This block contain main constant
 uint8_t RXBuff[BLOCK_SIZE];
 uint8_t u8CountBlock = 0U;
@@ -39,7 +39,7 @@ int SystemInit(void)
   }
   return 0;
 }
-
+/*********************************/
 void main(void)
 {
   SystemInit();
@@ -92,10 +92,6 @@ void main(void)
           switch (Request)
           {
           case 0x31://Soft and boot version
-            //uint8_t* pValue =(uint8_t*) 0x9FC0;
-            //u8BootVersion = *(pValue);
-            //u8SoftVersion = *(pValue +  sizeof(uint8_t));
-            //u8HardVersion = *(pValue +  2 * sizeof(uint8_t));
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
 #ifdef OLD_VERSION
