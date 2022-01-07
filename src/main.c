@@ -1,5 +1,7 @@
 #include "main.h"
 /*********************************/
+#define OLD_VERSION
+
 //This block contain main constant
 uint8_t RXBuff[BLOCK_SIZE];
 uint8_t u8CountBlock = 0U;
@@ -12,6 +14,7 @@ uint8_t u8ACK = 0x55U;
 uint8_t u8NACK = 0x65U;
 uint8_t Request = 0x00;
 //Info variables
+uint8_t *pu8PageInfo = (uint8_t*) 0x9FC0; 
 uint8_t u8SoftVersion = 0x01;
 uint8_t u8BootVersion = 0x01;
 uint8_t u8HardVersion = 0x02;
@@ -53,6 +56,26 @@ void main(void)
     }
     else
     { //with bootloader
+      for(uint8_t i = 0; i < 3; ++i){//Read current version from flash
+        switch(i){
+        case 0:
+          u8SoftVersion = pu8PageInfo[i];
+        case 1:
+          u8BootVersion = pu8PageInfo[i];
+        case 2:
+          u8HardVersion = pu8PageInfo[i];
+        }
+      }
+      //Set default version if other undefined
+      if(u8SoftVersion == 0x00){
+        u8SoftVersion = 0x01;
+      }
+      if(u8BootVersion == 0x00){
+        u8BootVersion = 0x01;
+      }
+      if(u8HardVersion == 0x00){
+        u8HardVersion = 0x01;
+      }
       vUART_Transmit(0x55);
       vUART_Transmit(0xAA);
       vUART_Transmit(0x55);
@@ -75,7 +98,9 @@ void main(void)
             //u8HardVersion = *(pValue +  2 * sizeof(uint8_t));
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
+#ifdef OLD_VERSION
             vUART_Transmit(u8HardVersion);
+#endif
             vUART_Transmit(u8FreeSize);
             for(int i = 0; i < 12; ++i){
               vUART_Transmit(u8UID[i]);
@@ -87,7 +112,7 @@ void main(void)
             vUART_Transmit(u8ACK);
             Request = 0x00;
             uint8_t u8CountRecieve = 0x00;
-            while(u8CountRecieve < 63){
+            while(u8CountRecieve < 64){
               uint8_t u8RecieveByte = 0x00;
               uint8_t u8rCRC = 0xFF;
               uint8_t u8dCRC = 0xFF;

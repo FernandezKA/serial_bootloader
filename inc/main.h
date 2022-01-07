@@ -17,6 +17,7 @@ extern uint8_t u8CountBlockReieved;
 extern uint8_t u8CountEnd;
 extern uint8_t u8BlockCRC;
 extern uint8_t u8CRC;
+extern uint8_t *pu8PageInfo;
 extern uint8_t u8BootVersion;
 extern uint8_t u8SoftVersion;
 extern uint8_t u8HardVersion;
