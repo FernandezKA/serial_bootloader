@@ -94,7 +94,7 @@ void main(void)
           case 0x31://Soft and boot version
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
-#ifdef OLD_VERSION
+#ifndef OLD_VERSION
             vUART_Transmit(u8HardVersion);
 #endif
             vUART_Transmit(u8FreeSize);

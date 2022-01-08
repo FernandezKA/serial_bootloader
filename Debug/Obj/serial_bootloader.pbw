@@ -38684,7 +38684,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2684@F@main@i",
+    "ID": "c:main.c@2685@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -38698,7 +38698,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3018@F@main@u8CountRecieve",
+    "ID": "c:main.c@3019@F@main@u8CountRecieve",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CountRecieve",
@@ -38712,7 +38712,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3105@F@main@u8RecieveByte",
+    "ID": "c:main.c@3106@F@main@u8RecieveByte",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8RecieveByte",
@@ -38726,7 +38726,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3150@F@main@u8rCRC",
+    "ID": "c:main.c@3151@F@main@u8rCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8rCRC",
@@ -38740,7 +38740,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3188@F@main@u8dCRC",
+    "ID": "c:main.c@3189@F@main@u8dCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8dCRC",
@@ -38754,7 +38754,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3431@F@main@i",
+    "ID": "c:main.c@3432@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -39064,6 +39064,48 @@
     "scope": null
   },
   {
+    "ID": "c:@F@vFlashUnlock",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vFlashUnlock(void)",
+    "location": {
+      "column": "6",
+      "line": "3",
+      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\flash.c"
+    },
+    "name": "vFlashUnlock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vFlashWritePage",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\flash.c"
+    },
+    "name": "vFlashWritePage",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:flash.c@197@F@vFlashWritePage@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "17",
+      "line": "11",
+      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\flash.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@eBuffState",
     "What": "Variable",
     "defdec": "Dec",
@@ -39161,48 +39203,6 @@
     },
     "name": "eBuffState",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashUnlock",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void vFlashUnlock(void)",
-    "location": {
-      "column": "6",
-      "line": "3",
-      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\flash.c"
-    },
-    "name": "vFlashUnlock",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vFlashWritePage",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void vFlashWritePage(uint32_t, uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\flash.c"
-    },
-    "name": "vFlashWritePage",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:flash.c@197@F@vFlashWritePage@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "17",
-      "line": "11",
-      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\flash.c"
-    },
-    "name": "i",
-    "origin": "project_file",
     "scope": null
   },
   {
