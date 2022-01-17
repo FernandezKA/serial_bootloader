@@ -4,6 +4,7 @@
 #define BLOCK_SIZE      64
 #define BOOT_PORT       GPIOB
 #define BOOT_PIN        0x10
+#define CountSimleNums  0x06
 #define InfoBlock 0x00009F80
 //User include
 #include "stm8s_conf.h"
@@ -11,6 +12,9 @@
 #include "base_logic.h"
 #include "flash.h"
 //User variables
+//Varilable for scrambling
+extern uint8_t SimpleNums[CountSimleNums];
+
 extern uint8_t RXBuff[BLOCK_SIZE];
 extern uint8_t u8CountBlock;
 extern uint8_t u8CountBlockReieved;

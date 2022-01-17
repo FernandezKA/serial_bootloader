@@ -3,6 +3,9 @@
 #define OLD_VERSION
 /*********************************/
 //This block contain main constant
+
+uint8_t SimpleNums[CountSimleNums] = {37, 83, 71, 157, 109};
+
 uint8_t RXBuff[BLOCK_SIZE];
 uint8_t u8CountBlock = 0U;
 uint8_t u8CountRecieve = 0U;
@@ -122,6 +125,14 @@ void main(void)
               }
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
+                
+                //Get unscramble soft
+                for(uint8_t i = 0; i < 64; ++i){
+                  if(RXBuff[i] != 0x00 || RXBuff[i] != 0xFF){
+                    RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
+                  }
+                }
+                
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
                 FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
