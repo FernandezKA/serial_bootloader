@@ -131,6 +131,9 @@ void main(void)
                   if(RXBuff[i] != 0x00 || RXBuff[i] != 0xFF){
                     RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
                   }
+                  else{
+                    asm("nop");//For debug
+                  }
                 }
                 
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
