@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>3198840620</Checksum>
+        <Checksum>453083114</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -86,11 +86,7 @@
         <Bp0>_ "STD_CODE" "{C:\dev\STM8\bootloader}.8.5" 0 0 0 0 "" 0 ""</Bp0>
         <Bp1>_ "STD_CODE" "{C:\dev\STM8\bootloader}.276.2" 0 0 0 0 "" 0 ""</Bp1>
         <Bp2>_ "STD_CODE" "{C:\dev\STM8\bootloader}.63.3" 0 0 0 0 "" 0 ""</Bp2>
-        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.54.7" 1 0 0 0 "" 0 ""</Bp3>
-        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.65.11" 1 0 0 0 "" 0 ""</Bp4>
-        <Bp5>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.98.13" 1 0 0 0 "" 0 ""</Bp5>
-        <Bp6>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.93.13" 1 0 0 0 "" 0 ""</Bp6>
-        <Count>7</Count>
+        <Count>3</Count>
     </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>

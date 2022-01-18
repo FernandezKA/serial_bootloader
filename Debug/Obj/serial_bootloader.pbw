@@ -38418,13 +38418,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3742@F@main@i",
+    "ID": "c:main.c@3687@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "29",
-      "line": "130",
+      "line": "129",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -38438,7 +38438,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "158",
+      "line": "157",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",

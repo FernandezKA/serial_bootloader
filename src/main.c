@@ -125,14 +125,13 @@ void main(void)
               }
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
-                
-                //Get unscramble soft
+
                 for(uint8_t i = 0; i < 64; ++i){
-                  if(RXBuff[i] != 0x00 || RXBuff[i] != 0xFF){
+                  if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
                     RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
                   }
                   else{
-                    asm("nop");//For debug
+                    asm("nop");
                   }
                 }
                 
