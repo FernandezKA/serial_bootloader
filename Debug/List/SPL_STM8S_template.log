@@ -124,9 +124,9 @@ Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_clk.o.
               definition:  CLK_SYSCLKEmergencyClear
               definition:  CLK_SlowActiveHaltWakeUpCmd
               definition:  HSIDivFactor
-              definition:  __iar_cc.._fiiWX93Bf_
-              definition:  __iar_cc..j$IY8VfxRz9
-              definition:  __iar_cc..2RGsYq26v98
+              definition:  __iar_cc..1vKZdwJEMT6
+              definition:  __iar_cc..lVdCmH1_SmD
+              definition:  __iar_cc..W$iiXenbdO_
 Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_flash.o.
               reference :  ?add32_l0_l0_dl
               reference :  ?add32_l0_l0_l1
@@ -208,8 +208,8 @@ Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_gpio.o.
               definition:  GPIO_WriteHigh
               definition:  GPIO_WriteLow
               definition:  GPIO_WriteReverse
-              definition:  __iar_cc..KBm8amlLU21
-              definition:  __iar_cc..B74vgNkTsa8
+              definition:  __iar_cc..Cx0NfCbzAe8
+              definition:  __iar_cc..XrRzXVQJf7D
 Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_it.o.
               definition:  ADC1_IRQHandler
               definition:  AWU_IRQHandler
@@ -358,7 +358,7 @@ Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim1.o.
               definition:  TIM1_TimeBaseInit
               definition:  TIM1_UpdateDisableConfig
               definition:  TIM1_UpdateRequestConfig
-              definition:  __iar_cc..yw3uIH2jdC5
+              definition:  __iar_cc..k247q8AUAY1
 Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim2.o.
               reference :  ?and16_x_x_dw
               reference :  ?b0
@@ -428,7 +428,7 @@ Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim2.o.
               definition:  TIM2_TimeBaseInit
               definition:  TIM2_UpdateDisableConfig
               definition:  TIM2_UpdateRequestConfig
-              definition:  __iar_cc..IHMQv3rm0R$
+              definition:  __iar_cc..8ta4sDAbID9
 Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_tim4.o.
               reference :  ?b0
               reference :  ?b10
@@ -529,7 +529,7 @@ Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\stm8s_uart1.o.
               definition:  UART1_SmartCardCmd
               definition:  UART1_SmartCardNACKCmd
               definition:  UART1_WakeUpConfig
-              definition:  __iar_cc..P8cudyG80P1
+              definition:  __iar_cc..2vPVJvDvFG8
 Loading object C:\dev\STM8\bootloader\serial_bootloader\Debug\Obj\uart.o.
               reference :  ?b0
               reference :  ?b1
@@ -1282,6 +1282,8 @@ Marking from fragment #65 .near_func.text (28 main.o)
   Marking symbol ?b0                              Glb (6 vregs.o)
   Marking symbol ?b1                              Glb (7 vregs.o)
   Marking symbol ?b0                              Glb (6 vregs.o)
+  Marking symbol RXBuff                           Glb (87 main.o)
+  Marking symbol ?b1                              Glb (7 vregs.o)
   Marking symbol RXBuff                           Glb (87 main.o)
   Marking symbol ?b1                              Glb (7 vregs.o)
   Marking symbol FLASH_Unlock                     Glb (212 stm8s_flash.o)
@@ -3545,7 +3547,7 @@ Unused fragments:
     CLK_GetITStatus
   .near_func.text       32     0x0   0x33
     CLK_ClearITPendingBit
-  .near.rodata          34     0x0   0x3a
+  .near.rodata          34     0x0   0x41
   .near_func.text       10     0x0   0x18  stm8s_flash.o
     FLASH_DeInit
   .near_func.text       11     0x0   0x2f
@@ -3598,12 +3600,12 @@ Unused fragments:
     GPIO_ReadInputPin
   .near_func.text       17     0x0   0x5a
     GPIO_ExternalPullUpConfig
-  .near.rodata          19     0x0   0x3b
+  .near.rodata          19     0x0   0x42
   .near_func.text        8     0x0   0x43  stm8s_rst.o
     RST_GetFlagStatus
   .near_func.text        9     0x0   0x3a
     RST_ClearFlag
-  .near.rodata          11     0x0   0x3a
+  .near.rodata          11     0x0   0x41
   .near_func.text        8     0x0   0x99  stm8s_tim1.o
     TIM1_DeInit
   .near_func.text        9     0x0   0x60
@@ -3760,7 +3762,7 @@ Unused fragments:
     TI3_Config
   .near_func.text       85     0x0   0x2e
     TI4_Config
-  .near.rodata          87     0x0   0x3b
+  .near.rodata          87     0x0   0x42
   .near_func.text        8     0x0   0x59  stm8s_tim2.o
     TIM2_DeInit
   .near_func.text        9     0x0   0x10
@@ -3853,7 +3855,7 @@ Unused fragments:
     TI2_Config
   .near_func.text       53     0x0   0x2e
     TI3_Config
-  .near.rodata          55     0x0   0x3b
+  .near.rodata          55     0x0   0x42
   .near_func.text        8     0x0   0x19  stm8s_tim4.o
     TIM4_DeInit
   .near_func.text        9     0x0   0x51
@@ -3890,7 +3892,7 @@ Unused fragments:
     TIM4_GetITStatus
   .near_func.text       25     0x0   0x23
     TIM4_ClearITPendingBit
-  .near.rodata          27     0x0   0x3b
+  .near.rodata          27     0x0   0x42
   .near_func.text        8     0x0   0x2d  stm8s_uart1.o
     UART1_DeInit
   .near_func.text        9     0x0  0x226
@@ -3941,7 +3943,7 @@ Unused fragments:
     UART1_GetITStatus
   .near_func.text       32     0x0   0x35
     UART1_ClearITPendingBit
-  .near.rodata          34     0x0   0x3c
+  .near.rodata          34     0x0   0x43
   .near.bss              8     0x0    0x1  uart.o
     u8CountRecieveBlock
   .near_func.text       10     0x0   0x2d

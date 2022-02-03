@@ -1,11 +1,9 @@
 #include "main.h"
-/*********************************/
-#define OLD_VERSION
-/*********************************/
+/******************************************************************************/
+#define CRYPTO
+/******************************************************************************/
 //This block contain main constant
-
 uint8_t SimpleNums[CountSimleNums] = {37, 83, 71, 157, 109};
-
 uint8_t RXBuff[BLOCK_SIZE];
 uint8_t u8CountBlock = 0U;
 uint8_t u8CountRecieve = 0U;
@@ -27,7 +25,7 @@ uint8_t u8SoftSize = 0x00;
 uint16_t u8FreeSize = 0x40; 
 uint8_t u8UID[12] = {0};
 uint8_t u8PageInfo[64];
-/*********************************/
+/******************************************************************************/
 int SystemInit(void)
 {
   CLK->CKDIVR = 0;
@@ -37,12 +35,13 @@ int SystemInit(void)
   GPIOB->CR1|=(1<<5);
   //INPUT PULL UP
   GPIOB->CR1|=(1<<4);
+  //Read UID number of MCU
   for(uint8_t i = 0; i < 12; ++i){
     u8UID[i] = FLASH_ReadByte(0x4865 + i);
   }
   return 0;
 }
-/*********************************/
+/******************************************************************************/
 void main(void)
 {
   SystemInit();
@@ -83,6 +82,7 @@ void main(void)
       vUART_Transmit(0xAA);
       vUART_Transmit(0x55);
       uint8_t Request = 0x00;
+/******************************************************************************/
       for (;;)
       {
         while (Request == 0x00)
@@ -97,9 +97,6 @@ void main(void)
           case 0x31://Soft and boot version
             vUART_Transmit(u8BootVersion);
             vUART_Transmit(u8SoftVersion);
-#ifndef OLD_VERSION
-            vUART_Transmit(u8HardVersion);
-#endif
             vUART_Transmit(u8FreeSize);
             for(int i = 0; i < 12; ++i){
               vUART_Transmit(u8UID[i]);
@@ -126,15 +123,17 @@ void main(void)
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
 
+#ifdef CRYPTO
                 for(uint8_t i = 0; i < 64; ++i){
                   if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
                     RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
                   }
                   else{
                     asm("nop");
+                    RXBuff[i] = 0x00;
                   }
                 }
-                
+#endif
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
                 FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
@@ -152,7 +151,7 @@ void main(void)
     }
   }
 }
-
+/******************************************************************************/
 #ifdef USE_FULL_ASSERT
 void assert_failed(u8 *file, u32 line)
 {

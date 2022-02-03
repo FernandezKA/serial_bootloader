@@ -3,7 +3,7 @@
 //User definitions
 #define BLOCK_SIZE      64
 #define BOOT_PORT       GPIOB
-#define BOOT_PIN        0x10
+#define BOOT_PIN        0x10 //GPIOB4
 #define CountSimleNums  0x06
 #define InfoBlock 0x00009F80
 //User include
