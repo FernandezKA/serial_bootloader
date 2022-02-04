@@ -1,6 +1,7 @@
 #include "main.h"
 /******************************************************************************/
-#define CRYPTO
+#define CRYPTO_LIST
+#define CRYPTO_UID
 /******************************************************************************/
 //This block contain main constant
 uint8_t SimpleNums[CountSimleNums] = {37, 83, 71, 157, 109};
@@ -122,11 +123,21 @@ void main(void)
               }
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
-
-#ifdef CRYPTO
+#ifdef CRYPTO_LIST
                 for(uint8_t i = 0; i < 64; ++i){
                   if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
                     RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
+                  }
+                  else{
+                    asm("nop");
+                    RXBuff[i] = 0x00;
+                  }
+                }
+#endif
+#ifdef CRYPTO_UID
+                for(uint8_t i = 0; i < 64; ++i){
+                  if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
+                    RXBuff[i] ^= u8UID[u8CountRecieve % 12];
                   }
                   else{
                     asm("nop");
