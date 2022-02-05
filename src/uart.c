@@ -44,11 +44,13 @@ void vUART_Recieve(uint8_t data)
 */
 void vUART_Transmit(uint8_t data)
 {
+  UART1->CR2&=~UART1_CR2_REN;
   while ((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE)
   { 
     asm("nop");//Wait empty buff state
   }
   UART1->DR = data;
+  UART1->CR2|=UART1_CR2_REN;
 }
 /*
 *@brief:  this function receieve size of loaded soft

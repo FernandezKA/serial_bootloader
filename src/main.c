@@ -1,7 +1,7 @@
 #include "main.h"
 /******************************************************************************/
-#define CRYPTO_LIST
-#define CRYPTO_UID
+//#define CRYPTO_LIST
+//#define CRYPTO_UID
 /******************************************************************************/
 //This block contain main constant
 uint8_t SimpleNums[CountSimleNums] = {37, 83, 71, 157, 109};
@@ -123,28 +123,28 @@ void main(void)
               }
               u8rCRC = u8UART_RecieveNoIRQ();
               if(u8rCRC == u8dCRC){
-#ifdef CRYPTO_LIST
-                for(uint8_t i = 0; i < 64; ++i){
-                  if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
-                    RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
-                  }
-                  else{
-                    asm("nop");
-                    RXBuff[i] = 0x00;
-                  }
-                }
-#endif
-#ifdef CRYPTO_UID
-                for(uint8_t i = 0; i < 64; ++i){
-                  if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
-                    RXBuff[i] ^= u8UID[u8CountRecieve % 12];
-                  }
-                  else{
-                    asm("nop");
-                    RXBuff[i] = 0x00;
-                  }
-                }
-#endif
+//#ifdef CRYPTO_LIST
+//                for(uint8_t i = 0; i < 64; ++i){
+//                  if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
+//                    RXBuff[i] ^= SimpleNums[u8CountRecieve % CountSimleNums];
+//                  }
+//                  else{
+//                    asm("nop");
+//                    RXBuff[i] = 0x00;
+//                  }
+//                }
+//#endif
+//#ifdef CRYPTO_UID
+//                for(uint8_t i = 0; i < 64; ++i){
+//                  if(RXBuff[i] != 0x00 && RXBuff[i] != 0xFF){
+//                    RXBuff[i] ^= u8UID[u8CountRecieve % 12];
+//                  }
+//                  else{
+//                    asm("nop");
+//                    RXBuff[i] = 0x00;
+//                  }
+//                }
+//#endif
                 FLASH_Unlock(FLASH_MEMTYPE_PROG);
                 FLASH_ProgramBlock(u8CountRecieve, FLASH_MEMTYPE_PROG, FLASH_PROGRAMMODE_STANDARD, RXBuff);
                 FLASH_Lock(FLASH_MEMTYPE_PROG);
@@ -155,6 +155,9 @@ void main(void)
                 vUART_Transmit(u8NACK);
               }
             }
+            break;
+          default:
+            Request = 0x00;
             break;
           }
         }
