@@ -1,7 +1,7 @@
 #include "main.h"
 /******************************************************************************/
 //#define CRYPTO_LIST
-//#define CRYPTO_UID
+#define CRYPTO_UID
 /******************************************************************************/
 //This block contain main constant
 uint8_t SimpleNums[CountSimleNums] = {37, 83, 71, 157, 109};

@@ -86,11 +86,6 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-        <Category>_ 0</Category>
-    </LogFile>
     <Breakpoints>
         <Bp0>_ "STD_CODE" "{C:\dev\STM8\bootloader}.8.5" 0 0 0 0 "" 0 ""</Bp0>
         <Bp1>_ "STD_CODE" "{C:\dev\STM8\bootloader}.276.2" 0 0 0 0 "" 0 ""</Bp1>
@@ -98,6 +93,11 @@
         <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.94.13" 1 0 0 0 "" 0 ""</Bp3>
         <Count>4</Count>
     </Breakpoints>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
     <Aliases>
         <A0>_ "C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\src\stm8s_flash.c" ""</A0>
         <Count>1</Count>
