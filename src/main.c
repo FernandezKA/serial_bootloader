@@ -1,6 +1,6 @@
 #include "main.h"
 /******************************************************************************/
-//#define CRYPTO_LIST
+#define CRYPTO_LIST
 //#define CRYPTO_UID
 /******************************************************************************/
 //This block contain main constant
