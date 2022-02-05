@@ -50,6 +50,7 @@ void vUART_Transmit(uint8_t data)
     asm("nop");//Wait empty buff state
   }
   UART1->DR = data;
+  for(uint16_t i = 0; i < 0xFFF; ++i){asm("nop");}
   UART1->CR2|=UART1_CR2_REN;
 }
 /*

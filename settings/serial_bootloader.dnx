@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>3560904209</Checksum>
+        <Checksum>2321160474</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -82,6 +82,16 @@
         <GraphEnabled>0</GraphEnabled>
         <ShowTimeLog>1</ShowTimeLog>
     </DataSample>
+    <Breakpoints>
+        <Bp0>_ "STD_CODE" "{C:\dev\STM8\bootloader}.8.5" 0 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{C:\dev\STM8\bootloader}.276.2" 0 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{C:\dev\STM8\bootloader}.63.3" 0 0 0 0 "" 0 ""</Bp2>
+        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.157.30" 1 0 0 0 "" 0 ""</Bp3>
+        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.163.13" 1 0 0 0 "" 0 ""</Bp4>
+        <Bp5>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.157.30" 1 0 0 0 "" 0 ""</Bp5>
+        <Bp6>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.150.17" 1 0 0 0 "" 0 ""</Bp6>
+        <Count>7</Count>
+    </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -91,13 +101,6 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
-    <Breakpoints>
-        <Bp0>_ "STD_CODE" "{C:\dev\STM8\bootloader}.8.5" 0 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{C:\dev\STM8\bootloader}.276.2" 0 0 0 0 "" 0 ""</Bp1>
-        <Bp2>_ "STD_CODE" "{C:\dev\STM8\bootloader}.63.3" 0 0 0 0 "" 0 ""</Bp2>
-        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.94.13" 1 0 0 0 "" 0 ""</Bp3>
-        <Count>4</Count>
-    </Breakpoints>
     <Aliases>
         <A0>_ "C:\dev\MCU\STM8\Serial_bootloader\lib\SPL\src\stm8s_flash.c" ""</A0>
         <Count>1</Count>

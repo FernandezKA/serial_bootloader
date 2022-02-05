@@ -106,7 +106,9 @@ void main(void)
             break;
 /******************************************************************************/
           case 0x32://Recieve soft request
+            //UART1->CR2&=~UART1_CR2_REN;
             vUART_Transmit(u8ACK);
+            //UART1->CR2|=UART1_CR2_REN;
             Request = 0x00;
             uint8_t u8CountRecieve = 0x00;
             while(u8CountRecieve < 64){
@@ -152,6 +154,9 @@ void main(void)
                 vUART_Transmit(u8ACK);
               }
               else{
+                for(uint16_t i = 0x00; i < 0xFFF; ++i){
+                   asm("nop"); 
+                }
                 vUART_Transmit(u8NACK);
               }
             }
