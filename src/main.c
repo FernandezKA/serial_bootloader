@@ -152,6 +152,7 @@ void main(void)
                 vUART_Transmit(u8ACK);
               }
               else{
+                for(uint16_t i = 0; i < 0xFFF; ++i){asm("nop");}
                 vUART_Transmit(u8NACK);
               }
             }

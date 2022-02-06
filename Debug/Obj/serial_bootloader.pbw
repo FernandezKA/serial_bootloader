@@ -38824,13 +38824,27 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@5024@F@main@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "30",
+      "line": "155",
+      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@assert_failed",
     "What": "Function",
     "defdec": "Def",
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "170",
+      "line": "171",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -39402,13 +39416,27 @@
     "scope": null
   },
   {
+    "ID": "c:uart.c@1307@F@vUART_Transmit@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "16",
+      "line": "53",
+      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@u8UART_RecieveNoIRQ",
     "What": "Function",
     "defdec": "Def",
     "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "9",
-      "line": "60",
+      "line": "61",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "u8UART_RecieveNoIRQ",
