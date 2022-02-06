@@ -39402,13 +39402,27 @@
     "scope": null
   },
   {
+    "ID": "c:uart.c@1307@F@vUART_Transmit@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "16",
+      "line": "53",
+      "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@u8UART_RecieveNoIRQ",
     "What": "Function",
     "defdec": "Def",
     "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "9",
-      "line": "60",
+      "line": "61",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "u8UART_RecieveNoIRQ",
