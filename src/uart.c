@@ -11,10 +11,6 @@ void vUART_Config(void)
   UART1->BRR1 = 0x68;
   UART1->BRR2 = 0x02;
   UART1->CR2 |= UART1_CR2_REN | UART1_CR2_TEN;
-  //UART1->CR5|=UART1_CR5_HDSEL;
-  //UART1_Init(9600, UART1_WORDLENGTH_8D, UART1_STOPBITS_1, UART1_PARITY_NO, UART1_SYNCMODE_CLOCK_DISABLE, UART1_MODE_TXRX_ENABLE);
-  //UART1_ITConfig(UART1_IT_RXNE, ENABLE);
-  //UART1_Cmd(ENABLE);
 }
 /*
 *@brief:  This function recieve data into UART
@@ -50,7 +46,7 @@ void vUART_Transmit(uint8_t data)
     asm("nop");//Wait empty buff state
   }
   UART1->DR = data;
-  for(uint16_t i = 0; i < 0xFFF; ++i){asm("nop");}
+  for(uint16_t i = 0; i < 0xFFF; ++i){asm("nop");}//For one - wire bus
   UART1->CR2|=UART1_CR2_REN;
 }
 /*

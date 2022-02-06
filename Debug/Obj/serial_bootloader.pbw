@@ -38740,13 +38740,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3407@F@main@u8CountRecieve",
+    "ID": "c:main.c@3322@F@main@u8CountRecieve",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CountRecieve",
     "location": {
       "column": "21",
-      "line": "113",
+      "line": "111",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "u8CountRecieve",
@@ -38754,13 +38754,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3494@F@main@u8RecieveByte",
+    "ID": "c:main.c@3409@F@main@u8RecieveByte",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8RecieveByte",
     "location": {
       "column": "23",
-      "line": "115",
+      "line": "113",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "u8RecieveByte",
@@ -38768,13 +38768,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3539@F@main@u8rCRC",
+    "ID": "c:main.c@3454@F@main@u8rCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8rCRC",
     "location": {
       "column": "23",
-      "line": "116",
+      "line": "114",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "u8rCRC",
@@ -38782,13 +38782,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3577@F@main@u8dCRC",
+    "ID": "c:main.c@3492@F@main@u8dCRC",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8dCRC",
     "location": {
       "column": "23",
-      "line": "117",
+      "line": "115",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "u8dCRC",
@@ -38796,13 +38796,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3820@F@main@i",
+    "ID": "c:main.c@3735@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "27",
-      "line": "123",
+      "line": "121",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -38810,13 +38810,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5111@F@main@i",
+    "ID": "c:main.c@4982@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "30",
-      "line": "157",
+      "line": "155",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "i",
@@ -38830,7 +38830,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "175",
+      "line": "173",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\main.c"
     },
     "name": "assert_failed",
@@ -39366,7 +39366,7 @@
     "display": "void vUART_Recieve(uint8_t)",
     "location": {
       "column": "6",
-      "line": "24",
+      "line": "20",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Recieve",
@@ -39374,13 +39374,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@762@F@vUART_Recieve@u8CurrData",
+    "ID": "c:uart.c@527@F@vUART_Recieve@u8CurrData",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8CurrData",
     "location": {
       "column": "11",
-      "line": "27",
+      "line": "23",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "u8CurrData",
@@ -39394,7 +39394,7 @@
     "display": "void vUART_Transmit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "41",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "vUART_Transmit",
@@ -39402,13 +39402,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1307@F@vUART_Transmit@i",
+    "ID": "c:uart.c@1072@F@vUART_Transmit@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "53",
+      "line": "49",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "i",
@@ -39422,7 +39422,7 @@
     "display": "uint8_t u8UART_RecieveNoIRQ(void)",
     "location": {
       "column": "9",
-      "line": "61",
+      "line": "57",
       "path": "C:\\dev\\STM8\\bootloader\\serial_bootloader\\src\\uart.c"
     },
     "name": "u8UART_RecieveNoIRQ",
